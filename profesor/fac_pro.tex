@@ -1,0 +1,178 @@
+\documentclass{profesor}
+
+\title{Procedimiento de Resolución - Ejercicios de Factorización}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Factorización - Procedimientos Detallados}
+
+\subsection{Factor común monomio}
+\textbf{Ejercicio 1:}  
+Factorizar \( 6x^3 + 9x^2 \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se identifica el factor común: \( 3x^2 \).
+    \item Se extrae el factor común:
+    \[
+    6x^3 + 9x^2 = 3x^2 (2x + 3)
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 5:}  
+Factorizar \( 12p^5q^2 - 18p^3q^4 + 24p^2q \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Factor común: \( 6p^2q \).
+    \item Se extrae el factor común:
+    \[
+    12p^5q^2 - 18p^3q^4 + 24p^2q = 6p^2q (2p^3q - 3p q^3 + 4)
+    \]
+\end{itemize}
+
+\subsection{Diferencia de cuadrados}
+\textbf{Ejercicio 1:}  
+Factorizar \( x^2 - 16 \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se escribe como diferencia de cuadrados:
+    \[
+    x^2 - 16 = (x - 4)(x + 4)
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 5:}  
+Factorizar \( x^4 - 81 \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se reconoce como \( (x^2)^2 - 9^2 \), aplicando la diferencia de cuadrados:
+    \[
+    x^4 - 81 = (x^2 - 9)(x^2 + 9)
+    \]
+    \item Luego, se sigue factorizando \( x^2 - 9 \):
+    \[
+    x^4 - 81 = (x - 3)(x + 3)(x^2 + 9)
+    \]
+\end{itemize}
+
+\subsection{Suma o diferencia de cubos}
+\textbf{Ejercicio 1:}  
+Factorizar \( x^3 + 27 \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se usa la fórmula de la suma de cubos:
+    \[
+    a^3 + b^3 = (a + b)(a^2 - ab + b^2)
+    \]
+    \item Identificamos \( a = x \) y \( b = 3 \):
+    \[
+    x^3 + 27 = (x + 3)(x^2 - 3x + 9)
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 5:}  
+Factorizar \( 343p^3 + 512q^3 \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se identifican \( a = 7p \) y \( b = 8q \).
+    \item Aplicamos la fórmula:
+    \[
+    343p^3 + 512q^3 = (7p + 8q)(49p^2 - 56pq + 64q^2)
+    \]
+\end{itemize}
+
+\subsection{Suma o diferencia de potencias impares iguales}
+\textbf{Ejercicio 1:}  
+Factorizar \( x^5 - y^5 \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se usa la factorización:
+    \[
+    x^5 - y^5 = (x - y)(x^4 + x^3y + x^2y^2 + xy^3 + y^4)
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 5:}  
+Factorizar \( t^{15} - u^{15} \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se expresa como \( (t^5)^3 - (u^5)^3 \).
+    \item Aplicamos la diferencia de cubos y luego de potencias impares:
+    \[
+    t^{15} - u^{15} = (t^5 - u^5)(t^{10} + t^5u^5 + u^{10})
+    \]
+    \item Finalmente, factorizamos \( t^5 - u^5 \) usando la regla anterior.
+\end{itemize}
+
+\subsection{Trinomio cuadrado perfecto}
+\textbf{Ejercicio 1:}  
+Factorizar \( x^2 + 6x + 9 \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se reconoce como un trinomio cuadrado perfecto:
+    \[
+    x^2 + 6x + 9 = (x + 3)^2
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 5:}  
+Factorizar \( 25p^2 + 70p + 49 \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se reconoce que \( 25p^2 = (5p)^2 \) y \( 49 = 7^2 \).
+    \item Se tiene:
+    \[
+    25p^2 + 70p + 49 = (5p + 7)^2
+    \]
+\end{itemize}
+
+\subsection{Factorización por evaluación y división sintética}
+\textbf{Ejercicio 1:}  
+Factorizar \( x^3 - 4x^2 - 7x + 10 \), con raíz \( x = 2 \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se realiza división sintética de \( x^3 - 4x^2 - 7x + 10 \) entre \( x - 2 \).
+    \[
+    \begin{array}{r|rrrr}
+    2 & 1 & -4 & -7 & 10  \\
+      &   & 2  & -4 & -22 \\
+    \hline
+      & 1 & -2  & -11 & 0 \\
+    \end{array}
+    \]
+    \item El cociente es \( x^2 - 2x - 5 \).
+    \item Se factoriza si es posible.
+\end{itemize}
+
+\textbf{Ejercicio 5:}  
+Factorizar \( x^4 - 10x^3 + 35x^2 - 50x + 24 \), con raíz \( x = 3 \).
+
+\textbf{Solución:}
+\begin{itemize}
+    \item Se realiza división sintética:
+    \[
+    \begin{array}{r|rrrrr}
+    3 & 1 & -10 & 35 & -50 & 24  \\
+      &   & 3  & -21 & 42 & -24 \\
+    \hline
+      & 1 & -7  & 14  & -8  & 0 \\
+    \end{array}
+    \]
+    \item El cociente \( x^3 - 7x^2 + 14x - 8 \) se sigue factorizando.
+\end{itemize}
+
+\end{document}

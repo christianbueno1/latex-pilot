@@ -1,0 +1,316 @@
+\documentclass{profesor}
+
+\title{Funciones de Variable Real - Ejercicios y Procedimientos}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Funciones de Variable Real}
+
+% --- DOMINIO ---
+\subsection{Dominio}
+
+\textbf{Ejercicio 1:} Determinar el dominio de \( f(x) = \frac{x+2}{x^2-4} \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Identificamos restricciones en el denominador:
+    \[
+    x^2 - 4 = 0 \Rightarrow (x-2)(x+2) = 0 \Rightarrow x = \pm 2
+    \]
+    \item El dominio es:
+    \[
+    D_f = \mathbb{R} \setminus \{ -2, 2 \}
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 2:} Determinar el dominio de \( f(x) = \sqrt{5 - x} \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item La raíz cuadrada requiere que el argumento sea no negativo:
+    \[
+    5 - x \geq 0
+    \]
+    \item Resolviendo:
+    \[
+    x \leq 5
+    \]
+    \item El dominio es:
+    \[
+    D_f = (-\infty, 5]
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 3:} Determinar el dominio de \( f(x) = \ln(3x - 2) \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item La función logarítmica está definida cuando su argumento es positivo:
+    \[
+    3x - 2 > 0
+    \]
+    \item Resolviendo:
+    \[
+    x > \frac{2}{3}
+    \]
+    \item El dominio es:
+    \[
+    D_f = \left(\frac{2}{3}, \infty\right)
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 4:} Determinar el dominio de \( f(x) = \frac{1}{\sqrt{x-4}} \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item La raíz cuadrada requiere que el argumento sea positivo (no solo no negativo, porque está en el denominador):
+    \[
+    x - 4 > 0
+    \]
+    \item Resolviendo:
+    \[
+    x > 4
+    \]
+    \item El dominio es:
+    \[
+    D_f = (4, \infty)
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 5:} Determinar el dominio de \( f(x) = \frac{x}{x^2 - x - 6} \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Factorizamos el denominador:
+    \[
+    x^2 - x - 6 = (x-3)(x+2)
+    \]
+    \item Evitamos los valores que hacen el denominador cero:
+    \[
+    x \neq -2, \quad x \neq 3
+    \]
+    \item El dominio es:
+    \[
+    D_f = \mathbb{R} \setminus \{ -2, 3 \}
+    \]
+\end{itemize}
+
+\newpage
+% --- RANGO ---
+\subsection{Rango}
+
+\textbf{Ejercicio 1:} Determinar el rango de \( f(x) = x^2 - 4 \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item La función es una parábola con vértice en \( (0, -4) \).
+    \item Como \( a > 0 \), la parábola abre hacia arriba.
+    \item El mínimo valor es -4 y no tiene límite superior.
+    \item El rango es:
+    \[
+    R_f = [-4, \infty)
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 2:} Determinar el rango de \( f(x) = \frac{1}{x} \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item La función no se anula y toma todos los valores reales excepto 0.
+    \item El rango es:
+    \[
+    R_f = \mathbb{R} \setminus \{0\}
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 3:} Determinar el rango de \( f(x) = e^x \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item La función exponencial \( e^x \) solo toma valores positivos.
+    \item No hay límite superior, pero sí un límite inferior en \( 0 \) (no se anula ni es negativa).
+    \item El rango es:
+    \[
+    R_f = (0, \infty)
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 4:} Determinar el rango de \( f(x) = \sqrt{x-2} \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item La raíz cuadrada solo toma valores no negativos.
+    \item Cuando \( x = 2 \), \( f(x) = 0 \).
+    \item A medida que \( x \to \infty \), también \( f(x) \to \infty \).
+    \item El rango es:
+    \[
+    R_f = [0, \infty)
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 5:} Determinar el rango de \( f(x) = \sin(x) + 3 \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item La función seno oscila entre \( -1 \) y \( 1 \).
+    \item Sumando 3, los valores oscilan entre \( 2 \) y \( 4 \).
+    \item El rango es:
+    \[
+    R_f = [2, 4]
+    \]
+\end{itemize}
+
+\newpage
+% --- GRÁFICA ---
+\subsection{Gráfica de una función de variable real}
+
+\textbf{Ejercicio 1:} Graficar \( f(x) = x^2 - 3x + 2 \).  
+\textbf{Solución:} Es una parábola con vértices en \( (1.5, -0.25) \), corta el eje \( x \) en \( x = 1, 2 \).  
+
+\textbf{Ejercicio 2:} Graficar \( f(x) = \frac{1}{x} \).  
+\textbf{Solución:} Hiperbola con asíntotas en \( x=0 \) y \( y=0 \).  
+
+\textbf{Ejercicio 3:} Graficar \( f(x) = \ln(x) \).  
+\textbf{Solución:} Creciente, pasa por \( (1,0) \) y no está definida para \( x \leq 0 \).  
+
+\textbf{Ejercicio 4:} Graficar \( f(x) = e^{-x} \).  
+\textbf{Solución:} Decreciente, tiende a \( 0 \) cuando \( x \to \infty \), pasa por \( (0,1) \).  
+
+\textbf{Ejercicio 5:} Graficar \( f(x) = \sqrt{x} - 2 \).  
+\textbf{Solución:} Definida para \( x \geq 0 \), inicia en \( (-2) \) y crece lentamente.  
+
+
+\newpage
+% --- MONOTONÍA ---
+\subsection{Monotonía}
+
+\textbf{Ejercicio 2:} Determinar la monotonía de \( f(x) = x^3 - 3x \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Para analizar cómo cambia la función, evaluamos algunos valores:
+    
+    \[
+    f(-2) = (-2)^3 - 3(-2) = -8 + 6 = -2
+    \]
+    
+    \[
+    f(-1) = (-1)^3 - 3(-1) = -1 + 3 = 2
+    \]
+    
+    \[
+    f(0) = 0^3 - 3(0) = 0
+    \]
+    
+    \[
+    f(1) = 1^3 - 3(1) = 1 - 3 = -2
+    \]
+    
+    \[
+    f(2) = 2^3 - 3(2) = 8 - 6 = 2
+    \]
+
+    \item Observamos que la función aumenta en \( (-\infty, -1) \), luego disminuye en \( (-1,1) \) y vuelve a aumentar en \( (1, \infty) \).
+    \item Por lo tanto:
+    \[
+    \text{Crece en } (-\infty, -1) \cup (1, \infty), \quad \text{Decrece en } (-1,1).
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 3:} Determinar la monotonía de \( f(x) = e^x - x^2 \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Analizamos valores en la función:
+    
+    \[
+    f(0) = e^0 - 0^2 = 1
+    \]
+    
+    \[
+    f(1) = e^1 - 1^2 = 2.718 - 1 = 1.718
+    \]
+    
+    \[
+    f(2) = e^2 - 2^2 = 7.389 - 4 = 3.389
+    \]
+    
+    \[
+    f(-1) = e^{-1} - (-1)^2 = 0.368 - 1 = -0.632
+    \]
+
+    \item Observamos que antes de un cierto punto (aproximadamente \( x = 0.7 \)), la función disminuye, y después de ese punto comienza a aumentar.
+    \item Entonces:
+    \[
+    \text{Decrece en } (-\infty, 0.7), \quad \text{Crece en } (0.7, \infty).
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 4:} Determinar la monotonía de \( f(x) = \ln(x) - x \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Probamos valores:
+    
+    \[
+    f(0.5) = \ln(0.5) - 0.5 \approx -0.693 - 0.5 = -1.193
+    \]
+    
+    \[
+    f(1) = \ln(1) - 1 = 0 - 1 = -1
+    \]
+    
+    \[
+    f(2) = \ln(2) - 2 \approx 0.693 - 2 = -1.307
+    \]
+    
+    \[
+    f(3) = \ln(3) - 3 \approx 1.099 - 3 = -1.901
+    \]
+
+    \item Vemos que la función crece para \( x < 1 \) y decrece para \( x > 1 \).
+    \item Entonces:
+    \[
+    \text{Crece en } (0,1), \quad \text{Decrece en } (1, \infty).
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 5:} Determinar la monotonía de \( f(x) = x^4 - 4x^2 + 2 \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Evaluamos algunos valores:
+
+    \[
+    f(-2) = (-2)^4 - 4(-2)^2 + 2 = 16 - 16 + 2 = 2
+    \]
+
+    \[
+    f(-1) = (-1)^4 - 4(-1)^2 + 2 = 1 - 4 + 2 = -1
+    \]
+
+    \[
+    f(0) = 0^4 - 4(0)^2 + 2 = 2
+    \]
+
+    \[
+    f(1) = 1^4 - 4(1)^2 + 2 = 1 - 4 + 2 = -1
+    \]
+
+    \[
+    f(2) = 2^4 - 4(2)^2 + 2 = 16 - 16 + 2 = 2
+    \]
+
+    \item Notamos que la función disminuye entre \( -\sqrt{2} \) y \( \sqrt{2} \), y aumenta fuera de ese intervalo.
+    \item Entonces:
+    \[
+    \text{Crece en } (-\infty, -\sqrt{2}) \cup (\sqrt{2}, \infty), \quad \text{Decrece en } (-\sqrt{2}, \sqrt{2}).
+    \]
+\end{itemize}
+
+
+\end{document}

@@ -1,0 +1,131 @@
+\documentclass{profesor}
+
+\title{Razones Trigonométricas - Ejercicios y Resoluciones}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Razones Trigonométricas}
+
+% --- VALORES DE LAS RAZONES TRIGONOMÉTRICAS DE ÁNGULOS NOTABLES ---
+\subsection{Valores de las Razones Trigonométricas de Ángulos Notables}
+
+\textbf{Ejercicio 1:}  
+Determinar los valores exactos de las razones trigonométricas para \( 30^\circ \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Usando la tabla de valores notables:
+    \[
+    \sin 30^\circ = \frac{1}{2}, \quad \cos 30^\circ = \frac{\sqrt{3}}{2}, \quad \tan 30^\circ = \frac{1}{\sqrt{3}}
+    \]
+    \item Además:
+    \[
+    \csc 30^\circ = 2, \quad \sec 30^\circ = \frac{2}{\sqrt{3}}, \quad \cot 30^\circ = \sqrt{3}
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 2:}  
+Calcular \( \tan 45^\circ \) y \( \cot 45^\circ \).
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item De la tabla de razones notables:
+    \[
+    \tan 45^\circ = \frac{\sin 45^\circ}{\cos 45^\circ} = \frac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{2}}{2}} = 1
+    \]
+    \item Y la cotangente es su inversa:
+    \[
+    \cot 45^\circ = \frac{1}{\tan 45^\circ} = 1
+    \]
+\end{itemize}
+
+\newpage
+% --- RESOLUCIÓN DE TRIÁNGULOS ---
+\subsection{Resolución de Triángulos}
+
+\textbf{Ejercicio 1:}  
+En un triángulo rectángulo, si \( \theta = 60^\circ \) y el cateto opuesto mide 10 cm, hallar la hipotenusa.
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Se usa la función seno:
+    \[
+    \sin 60^\circ = \frac{\text{cateto opuesto}}{\text{hipotenusa}}
+    \]
+    \item Sustituyendo valores:
+    \[
+    \frac{\sqrt{3}}{2} = \frac{10}{h}
+    \]
+    \item Despejamos \( h \):
+    \[
+    h = \frac{10 \times 2}{\sqrt{3}} = \frac{20}{\sqrt{3}} \approx 11.55 \text{ cm}
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 2:}  
+En un triángulo rectángulo, el cateto adyacente mide 5 cm y el ángulo \( \theta = 45^\circ \). Hallar la hipotenusa.
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Se usa la función coseno:
+    \[
+    \cos 45^\circ = \frac{\text{cateto adyacente}}{\text{hipotenusa}}
+    \]
+    \item Sustituyendo valores:
+    \[
+    \frac{\sqrt{2}}{2} = \frac{5}{h}
+    \]
+    \item Despejamos \( h \):
+    \[
+    h = \frac{5 \times 2}{\sqrt{2}} = 5\sqrt{2} \approx 7.07 \text{ cm}
+    \]
+\end{itemize}
+
+\newpage
+% --- PROBLEMAS DE APLICACIÓN ---
+\subsection{Problemas de Aplicación}
+
+\textbf{Ejercicio 1:}  
+Un avión vuela a una altitud de 2 km y observa un punto en el suelo con un ángulo de depresión de \( 30^\circ \). ¿A qué distancia horizontal está el punto observado?
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Se forma un triángulo rectángulo donde la altura es 2 km y el ángulo de depresión es \( 30^\circ \).
+    \item Se usa la función tangente:
+    \[
+    \tan 30^\circ = \frac{\text{altura}}{\text{distancia horizontal}}
+    \]
+    \item Sustituyendo valores:
+    \[
+    \frac{1}{\sqrt{3}} = \frac{2}{x}
+    \]
+    \item Despejamos \( x \):
+    \[
+    x = 2\sqrt{3} \approx 3.46 \text{ km}
+    \]
+\end{itemize}
+
+\textbf{Ejercicio 2:}  
+Un poste de 8 m de altura proyecta una sombra de 6 m. ¿Cuál es el ángulo de elevación del sol?
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Se usa la función tangente:
+    \[
+    \tan \theta = \frac{\text{altura}}{\text{sombra}}
+    \]
+    \item Sustituyendo valores:
+    \[
+    \tan \theta = \frac{8}{6} = \frac{4}{3}
+    \]
+    \item Aplicando arco tangente:
+    \[
+    \theta = \tan^{-1} \left( \frac{4}{3} \right) \approx 53.13^\circ
+    \]
+\end{itemize}
+
+\end{document}

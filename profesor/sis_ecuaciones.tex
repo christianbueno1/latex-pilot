@@ -1,0 +1,193 @@
+\documentclass{profesor}
+
+\title{Sistemas de Ecuaciones Lineales - Ejercicios y Resoluciones}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Sistemas de Ecuaciones Lineales}
+
+% --- MÉTODOS ALGEBRAICOS ---
+\subsection{Métodos Algebraicos}
+
+\textbf{Ejercicio 1:}  
+Resolver el siguiente sistema de ecuaciones usando el método de sustitución:  
+\[
+2x + y = 5
+\]
+\[
+x - y = 1
+\]
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Despejamos \( x \) en la segunda ecuación:
+    \[
+    x = y + 1
+    \]
+    \item Sustituyendo en la primera ecuación:
+    \[
+    2(y+1) + y = 5
+    \]
+    \item Expandimos y resolvemos:
+    \[
+    2y + 2 + y = 5
+    \]
+    \[
+    3y = 3 \Rightarrow y = 1
+    \]
+    \item Sustituyendo \( y = 1 \) en \( x = y + 1 \):
+    \[
+    x = 1 + 1 = 2
+    \]
+    \item Solución final: \( (x, y) = (2,1) \)
+\end{itemize}
+
+\textbf{Ejercicio 2:}  
+Resolver el siguiente sistema de ecuaciones usando el método de igualación:  
+\[
+3x - y = 7
+\]
+\[
+5x + 2y = 4
+\]
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Despejamos \( y \) en ambas ecuaciones:
+    \[
+    y = 3x - 7
+    \]
+    \[
+    y = \frac{5x - 4}{-2}
+    \]
+    \item Igualamos ambas expresiones:
+    \[
+    3x - 7 = \frac{5x - 4}{-2}
+    \]
+    \item Multiplicamos por -2 para eliminar fracción:
+    \[
+    -2(3x - 7) = 5x - 4
+    \]
+    \[
+    -6x + 14 = 5x - 4
+    \]
+    \item Resolviendo para \( x \):
+    \[
+    -6x - 5x = -4 - 14
+    \]
+    \[
+    -11x = -18 \Rightarrow x = \frac{18}{11}
+    \]
+    \item Sustituyendo en \( y = 3x - 7 \):
+    \[
+    y = 3\left(\frac{18}{11}\right) - 7 = \frac{54}{11} - \frac{77}{11} = \frac{-23}{11}
+    \]
+    \item Solución final: \( \left(\frac{18}{11}, \frac{-23}{11}\right) \)
+\end{itemize}
+
+\newpage
+% --- MÉTODO DE CRAMER ---
+\subsection{Método de Cramer}
+
+\textbf{Ejercicio 1:}  
+Resolver el siguiente sistema usando el método de Cramer:  
+\[
+\begin{cases}
+2x + 3y = 5 \\
+x - 4y = -2
+\end{cases}
+\]
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Escribimos la matriz de coeficientes:
+    \[
+    A =
+    \begin{bmatrix}
+    2 & 3 \\
+    1 & -4
+    \end{bmatrix}
+    \]
+    \item Calculamos el determinante de \( A \):
+    \[
+    |A| = (2)(-4) - (3)(1) = -8 - 3 = -11
+    \]
+    \item Matriz \( A_x \) (reemplazamos la primera columna con los términos independientes):
+    \[
+    A_x =
+    \begin{bmatrix}
+    5 & 3 \\
+    -2 & -4
+    \end{bmatrix}
+    \]
+    \item Determinante de \( A_x \):
+    \[
+    |A_x| = (5)(-4) - (3)(-2) = -20 + 6 = -14
+    \]
+    \item Matriz \( A_y \) (reemplazamos la segunda columna con los términos independientes):
+    \[
+    A_y =
+    \begin{bmatrix}
+    2 & 5 \\
+    1 & -2
+    \end{bmatrix}
+    \]
+    \item Determinante de \( A_y \):
+    \[
+    |A_y| = (2)(-2) - (5)(1) = -4 - 5 = -9
+    \]
+    \item Aplicamos la regla de Cramer:
+    \[
+    x = \frac{|A_x|}{|A|} = \frac{-14}{-11} = \frac{14}{11}
+    \]
+    \[
+    y = \frac{|A_y|}{|A|} = \frac{-9}{-11} = \frac{9}{11}
+    \]
+    \item Solución final: \( \left(\frac{14}{11}, \frac{9}{11}\right) \)
+\end{itemize}
+
+\textbf{Ejercicio 2:}  
+Resolver el siguiente sistema usando el método de Cramer:  
+\[
+\begin{cases}
+x + y + z = 6 \\
+2x - y + 3z = 14 \\
+3x + 4y + 2z = 20
+\end{cases}
+\]
+
+\textbf{Solución:}  
+\begin{itemize}
+    \item Matriz de coeficientes:
+    \[
+    A =
+    \begin{bmatrix}
+    1 & 1 & 1 \\
+    2 & -1 & 3 \\
+    3 & 4 & 2
+    \end{bmatrix}
+    \]
+    \item Determinante de \( A \):
+    \[
+    |A| =
+    1\begin{vmatrix}-1 & 3 \\ 4 & 2\end{vmatrix}
+    - 1\begin{vmatrix}2 & 3 \\ 3 & 2\end{vmatrix}
+    + 1\begin{vmatrix}2 & -1 \\ 3 & 4\end{vmatrix}
+    \]
+    \[
+    = 1(-1(2) - 3(4)) - 1(2(2) - 3(3)) + 1(2(4) + 1(3))
+    \]
+    \[
+    = ( -2 - 12 ) - ( 4 - 9 ) + ( 8 + 3 )
+    \]
+    \[
+    = -14 + 5 + 11 = 2
+    \]
+    \item Resolver \( x, y, z \) con las matrices \( A_x, A_y, A_z \) (proceso similar).  
+\end{itemize}
+
+\end{document}
