@@ -1,6 +1,15 @@
 # Latex Tutorial
 ## Set up a local LaTeX environment on Fedora
 ```bash
+# install Tex Live basic distribution
+sudo dnf install texlive-scheme-basic
+sudo dnf install latexmk
+sudo dnf install texlive-babel-spanish
+# sudo dnf install texlive-microtype texlive-xspace
+sudo dnf install texlive-tools texlive-microtype
+
+# install Tex Live medium distribution
+sudo dnf install texlive-scheme-medium
 # install TeX Live full distribution
 sudo dnf install texlive-scheme-full
 # this will install a 3GB+ package, so be patient
