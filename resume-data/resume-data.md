@@ -5,8 +5,8 @@ Aquí tienes **todo el texto legible** (sin comandos LaTeX ni código) extraído
 ## **Christian Bueno**
 
 **Ubicación:** Guayaquil, Guayas, Ecuador
-🌐 [christianbueno.me](https://www.christianbueno.me) | [LinkedIn](https://www.linkedin.com/in/christianbueno1/) | [GitHub](https://github.com/christianbueno1) | [Instagram](https://www.instagram.com/christianbueno.1/) | [CodePen](https://codepen.io/christianbueno1)
-📧 **Email:** [hola@christianbueno.me](mailto:hola@christianbueno.me)
+🌐 [christianbueno.work](https://www.christianbueno.work) | [LinkedIn](https://www.linkedin.com/in/christianbueno1/) | [GitHub](https://github.com/christianbueno1) | [Instagram](https://www.instagram.com/christianbueno.1/) | [CodePen](https://codepen.io/christianbueno1)
+📧 **Email:** [chris@deployhero.dev](mailto:chris@deployhero.dev)
 📱 **Móvil:** +593 99 028 8710
 
 ---
@@ -66,7 +66,7 @@ Contactos: Ing. Milton Villafuerte (+593 99 943 7032), Ing. Jonathan Bravo (+593
 
 #### **Desarrollador Full Stack**
 
-**[www.christianbueno.me](http://www.christianbueno.me)** — Guayaquil, Guayas, Ecuador
+**[www.christianbueno.work](http://www.christianbueno.work)** — Guayaquil, Guayas, Ecuador
 **Ene 2018 – Presente**
 
 * Servicios de Diseño y Desarrollo Web.
