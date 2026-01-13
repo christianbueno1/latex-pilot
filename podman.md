@@ -36,6 +36,12 @@ rm -rf resume-cb-en.{aux,log,out,pdf,fdb_latexmk,fls,synctex.gz}
 # 🎉 Tu PDF está listo:
 xdg-open resume-cb-en.pdf
 
+podman run --rm \
+  -v "$PWD":/data:Z \
+  -w /data \
+  docker.io/texlive/texlive \
+  pdflatex resume-cb-es.tex
+
 
 # copy to ~/Downloads
 # /home/chris/projects/latex-pilot/resume-cb-es/resume-cb-devops-es.pdf
@@ -43,3 +49,13 @@ xdg-open resume-cb-en.pdf
 cd /home/chris/projects/latex-pilot/
 cp resume-cb-en/resume-cb-devops-en.pdf resume-cb-es/resume-cb-devops-es.pdf ~/Downloads/
 
+```
+
+# globbing zsh
+```bash
+setopt extendedglob
+rm -rf ^resume-cb-es.tex
+# move back in shell
+alt + B
+# move forward in shell
+alt + F
