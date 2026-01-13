@@ -1,86 +1,78 @@
 %-------------------------
-% Rezume, a latex resume template for developers
-% Author : Nanu Panchamurthy
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-
-% Hope this resume template helps you land an awesome job. If you found this helpful, please consider starring the github repo here, .
+% Hoja de Vida, una plantilla de currículum en latex para desarrolladores
+% Autor : Christian Bueno
+% Basado en: https://github.com/christianbueno1/latex-pilot
+% Licencia : MIT
 %-------------------------
 
 
 
-%------------PACKAGES----------------
+%------------PAQUETES----------------
 \documentclass[a4paper,11pt]{article}
 
-\usepackage{verbatim} % reimplements the "verbatim" and "verbatim*" environments
+% Paquetes de diseño y tipografía
+\usepackage{titlesec}     % formato personalizado de secciones
+\usepackage{enumitem}     % control sobre listas (itemize, enumerate)
+\usepackage{fancyhdr}     % personalización de encabezados y pies de página
+\usepackage{tabularx}     % tablas mejoradas con anchos de columna flexibles
+\usepackage[empty]{fullpage} % márgenes de página personalizados
 
-\usepackage{titlesec} % provides an interface to sectioning commands i.e. custom elements
+% Enlaces y formato de texto
+\usepackage[hidelinks]{hyperref} % enlaces clicables sin bordes
+\usepackage[normalem]{ulem}      % subrayado con soporte para saltos de línea
 
-\usepackage{color} % provides both foreground and background color management
+% Soporte de color (versión moderna)
+\usepackage{xcolor}       % gestión avanzada de color
 
-\usepackage{enumitem} % provides control over enumerate, itemize and description
-
-\usepackage{fancyhdr} % provides extensive facilities for constructing headers, footers and also controlling their use
-
-\usepackage{tabularx} % defines an environment tabularx, extension of "tabular" with an extra designator x, paragraph like column whose width automatically expands to fill the width of the environment
-
-\usepackage{latexsym} % provides mathematical symbols
-
-\usepackage{marvosym} % provides martin vogel's symbol font which contains various symbols
-
-\usepackage[empty]{fullpage} % sets margins to one inch and removes headers, footers etc..
-
-\usepackage[hidelinks]{hyperref} % removes color and shadow of hyperlinks
-
-\usepackage[normalem]{ulem} % provides "\ul" (uline) command which will break at line breaks
-
-\usepackage[english]{babel} % provides culturally determined typographical rules for wide range of languages
+% Soporte de idioma
+\usepackage[spanish,es-noquoting]{babel} % reglas tipográficas del español
 %-----------------------------------------
 
-\input glyphtounicode % converts glyph names to unicode
-\pdfgentounicode=1 % ensures pdfs generated are ats readable
+\input glyphtounicode % convierte nombres de glifos a unicode
+\pdfgentounicode=1 % asegura que los PDFs generados sean legibles por ATS
 
-%----------FONT OPTIONS-------------------
-\usepackage[default]{sourcesanspro} % uses the font source sans pro
-\urlstyle{same} % changes url font from default urlfont to font being used by the document
+%----------OPCIONES DE FUENTE-------------------
+\usepackage[default]{sourcesanspro} % usa la fuente Source Sans Pro
+\urlstyle{same} % los URLs usan la misma fuente que el documento
 %-----------------------------------------
 
 
-%----------MARGIN OPTIONS-----------------
-\pagestyle{fancy} % set page style to one configured by fancyhdr
-\fancyhf{} % clear all header and footer fields
+%----------OPCIONES DE MÁRGENES-----------------
+\pagestyle{fancy} % estilo de página personalizable con fancyhdr
+\fancyhf{} % limpia todos los campos de encabezado y pie de página
 
-\renewcommand{\headrulewidth}{0in} % sets thickness of linerule under header to zero
-\renewcommand{\footrulewidth}{0in} % sets thickness of linerule over footer to zero
+\renewcommand{\headrulewidth}{0in} % grosor de línea bajo el encabezado a cero
+\renewcommand{\footrulewidth}{0in} % grosor de línea sobre el pie de página a cero
 
-\setlength{\tabcolsep}{0in} % sets thickness of column separator in tables to zero
+\setlength{\tabcolsep}{0in} % grosor del separador de columnas en tablas a cero
+\setlength{\footskip}{4.08003pt} % espacio mínimo para pie de página (evita warnings)
 
-% origin of the document is one inch from the top and from and the left
-% oddsidemargin and evensidemargin both refer to the left margin
-% right margin is indirectly set using oddsidemargin
+% origen del documento es una pulgada desde arriba y desde la izquierda
+% oddsidemargin y evensidemargin se refieren al margen izquierdo
+% el margen derecho se ajusta indirectamente usando oddsidemargin
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\topmargin}{-0.5in}
 
-\addtolength{\textwidth}{1.0in} % sets width of text area in the page to one inch
-\addtolength{\textheight}{1.0in} % sets height of text area in the page to one inch
+\addtolength{\textwidth}{1.0in} % aumenta el ancho del área de texto en una pulgada
+\addtolength{\textheight}{1.0in} % aumenta la altura del área de texto en una pulgada
 
-\raggedbottom{} % makes all pages the height of current page, no extra vertical space added
-\raggedright{} % makes all pages the width of current page, no extra horizontal space added
+\raggedbottom{} % todas las páginas tienen la altura de la página actual, sin espacio vertical extra
+\raggedright{} % todas las páginas tienen el ancho de la página actual, sin espacio horizontal extra
 %------------------------------------------
 
 
-%--------SECTIONING COMMANDS---------
-% \titleformat{<command>}
-%   [<shape>]{<format>}{<label>}{<sep>}
-%     {<before-code>}[<after-code>]
+%--------COMANDOS DE SECCIÓN---------
+% \titleformat{<comando>}
+%   [<forma>]{<formato>}{<etiqueta>}{<separación>}
+%     {<código-antes>}[<código-después>]
 
-% command is the sectioning command to be redefined
-% shape is the style of the font; scshape stands for small caps style
-% format is the format to be applied to whole title- label and text; absent here
-% label defines the label
-% sep is the horizontal separation between label and title body
-% before-code is the code to be executed before
-% after-code is the code to be executed after
+% comando: el comando de sección a redefinir (ej: \section)
+% forma: estilo de la fuente; scshape = versalitas (small caps)
+% formato: formato aplicado al título completo - etiqueta y texto
+% etiqueta: define la etiqueta de la sección
+% separación: separación horizontal entre etiqueta y cuerpo del título
+% código-antes: código ejecutado antes del título
+% código-después: código ejecutado después del título
 
 \titleformat{\section}
   {\scshape\large}{}
@@ -88,40 +80,41 @@
 %-------------------------------------
 
 
-%--------REDEFINITIONS----------------
-% redefines the style of the bullet point
+%--------REDEFINICIONES----------------
+% redefine el estilo del punto de viñeta
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-% redefines the underline depth to 2pt
+% redefine la profundidad del subrayado a 2pt
 \renewcommand{\ULdepth}{2pt}
 %-------------------------------------
 
 
-%--------CUSTOM COMMANDS--------------
-%\vspace{} defines a vertical space of given size, modifying this in custom commands can help stretch or shrink resume to remove or add content
+%--------COMANDOS PERSONALIZADOS--------------
+% \vspace{} define un espacio vertical de tamaño dado, modificarlo en comandos personalizados 
+% ayuda a estirar o encoger el CV para eliminar o agregar contenido
 
-% resumeItem renders a bullet point
+% resumeItem renderiza un punto de lista
 \newcommand{\resumeItem}[1]{
   \item\small{#1}
 }
 
-% commands to start and end itemization of resumeItem, rightmargin set to 0.11in to avoid the overflow of resumetItem beyond whatever resumeItemHeading is being used
+% comandos para iniciar y finalizar itemización de resumeItem
+% rightmargin ajustado a 0.11in para evitar desbordamiento de resumeItem
 \newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
-% resumeSectionType renders a bolded type to be used under a section, used as skill type here, middle element is used to keep ":"s in the same vertical line
+% resumeSectionType renderiza un tipo en negrita para usar bajo una sección
+% usado para tipo de habilidad aquí, el elemento del medio mantiene los ":" en la misma línea vertical
 \newcommand{\resumeSectionType}[3]{
-  % \item\begin{tabular*}{0.96\textwidth}[t]{
   \item\begin{tabularx}{0.96\textwidth}[t]{
-    % p{0.15\linewidth}p{0.02\linewidth}p{0.81\linewidth}
     p{0.15\linewidth}p{0.02\linewidth}X
   }
     \textbf{#1} & #2 & #3
-  % \end{tabular*}\vspace{-2pt}
   \end{tabularx}\vspace{-2pt}
 }
 
-% resumeTrioHeading renders three elements in three columns with second element being italicized and first element bolded, can be used for projects with three elements
+% resumeTrioHeading renderiza tres elementos en tres columnas
+% segundo elemento en cursiva y primer elemento en negrita, se puede usar para proyectos con tres elementos
 \newcommand{\resumeTrioHeading}[3]{
   \item\small{
     \begin{tabular*}{0.96\textwidth}[t]{
@@ -132,7 +125,9 @@
   }
 }
 
-% resumeQuadHeading renders four elements in a two columns with the second row being italicized and first element of first row bolded, can be used for experience and projects with four elements
+% resumeQuadHeading renderiza cuatro elementos en dos columnas
+% segunda fila en cursiva y primer elemento de primera fila en negrita
+% se puede usar para experiencia y proyectos con cuatro elementos
 \newcommand{\resumeQuadHeading}[4]{
   \item
   \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -141,7 +136,8 @@
   \end{tabular*}
 }
 
-% resumeQuadHeadingChild renders the second row of resumeQuadHeading, can be used for experience if different roles in the same company need to added
+% resumeQuadHeadingChild renderiza la segunda fila de resumeQuadHeading
+% se puede usar para experiencia si se necesitan agregar diferentes roles en la misma empresa
 \newcommand{\resumeQuadHeadingChild}[2]{
   \item
   \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -149,115 +145,98 @@
   \end{tabular*}
 }
 
-% commands to start and end itemization of resumeQuadHeading, lefmargin for left indent of 0.15in for resumeItems
+% comandos para iniciar y finalizar itemización de resumeQuadHeading
+% lefmargin para indentación izquierda de 0.15in para resumeItems
 \newcommand{\resumeHeadingListStart}{
   \begin{itemize}[leftmargin=0.15in, label={}]
 }
 \newcommand{\resumeHeadingListEnd}{\end{itemize}}
+
+% comandos para detalles de contacto - código más limpio
+\newcommand{\name}[1]{\textbf{\Huge #1}}
+\newcommand{\contactInfo}[2]{#1 & #2 \\}
+\newcommand{\socialLinks}[1]{#1}
+\newcommand{\separator}{$|$}
+% para usar puntos como separadores en lugar de pipes
+% \newcommand{\separator}{$\bullet$}
 %-------------------------------------------
 
 
-%__________________RESUME____________________
-% You can rearrange sections in any order you may prefer
+%__________________HOJA DE VIDA____________________
+% Puedes reorganizar las secciones en el orden que prefieras
 \begin{document}
 
-%-----------CONTACT DETAILS------------------
-% Make sure all the details are correct, you can add more links in the first row of second column if needed
+%-----------DETALLES DE CONTACTO------------------
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Huge Christian Bueno \vspace{2pt}} & % row = 1, col = 1
-  Location: Guayaquil, Guayas, Ecuador \\ % row = 1, col = 2
+  \name{Christian Bueno \vspace{2pt}} & 
+  Ubicación: Guayaquil, Guayas, Ecuador \\
   
-  \href{https://www.christianbueno.work}{\uline{christianbueno.work}} $|$ % row = 2, col = 1
-  \href{https://www.linkedin.com/in/christianbueno1/}{\uline{LinkedIn}} $|$ % row = 2, col = 1
-  \href{https://github.com/christianbueno1}{\uline{GitHub}} $|$ % row = 2, col = 1
-  \href{https://www.instagram.com/christianbueno.1/}{\uline{Instagram}} $|$ % row = 2, col = 1
-  \href{https://codepen.io/christianbueno1}{\uline{CodePen}} & % row = 2, col = 1
-  Email: \href{mailto:chris@deployhero.dev}{\uline{chris@deployhero.dev}} \\ % row = 2, col = 2
+  \socialLinks{
+    \href{https://www.christianbueno.work}{\uline{christianbueno.work}} \separator{}
+    \href{https://www.linkedin.com/in/christianbueno1/}{\uline{LinkedIn}} \separator{}
+    \href{https://github.com/christianbueno1}{\uline{GitHub}} \separator{}
+    \href{https://www.instagram.com/christianbueno.1/}{\uline{Instagram}}
+  } & 
+  Email: \href{mailto:chris@deployhero.dev}{\uline{chris@deployhero.dev}} \\
   
-   & % row = 3, col = 1
-  Mobile: +593 99 028 8710 \\ % row = 3, col = 2
+  & móvil: +593 99 028 8710 \\
 \end{tabular*}
 %--------------------------------------------
 
 
-%--------------SKILLS------------------------
-% Add or remove resumeSectionTypes according to your needs
-
-% \section{Technical Skills}
-%   \resumeHeadingListStart{}
-  
-%     \resumeSectionType{DevOps}{:}{Jenkins, Terraform, Ansible, Kubernetes}
-    
-%     \resumeSectionType{Languages}{:}{Python, JavaScript, TypeScript, Java}
-    
-%     \resumeSectionType{Frameworks}{:}{NestJS, Express.js, FastAPI, Django, Flask, Tailwindcss, Next.js}
-    
-%     \resumeSectionType{Databases}{:}{MySQL/MariaDB, PostgreSQL, SQL Server, MongoDB, Apache Cassandra}
-    
-%     \resumeSectionType{Dev Tools}{:}{Git, Vite, AWS, Linode, Docker, Podman, Linux, Node.js}
-    
-%     \resumeSectionType{Design}{:}{Kdenlive, Inkscape, GIMP, Canva, ChatGPT, Midjourney, OpenAI API, GitHub Copilot}
-
-%   \resumeHeadingListEnd{}
-
-\section{Technical Skills}
-\begin{tabular}{@{}ll@{}}
+%--------------HABILIDADES TÉCNICAS------------------------
+\section{Habilidades Técnicas}
+\begin{tabular}{@{}p{3.2cm}l@{}}
   \textbf{DevOps:} & Jenkins, Terraform/OpenTofu, Ansible, Kubernetes \\
-  \textbf{Languages:} & Python, JavaScript, TypeScript, Java \\
+  \textbf{Lenguajes:} & Python, JavaScript, TypeScript, Java \\
   \textbf{Frameworks:} & NestJS, Express.js, FastAPI, Django, Flask, Tailwindcss, Next.js \\
-  \textbf{Databases:} & MySQL/MariaDB, PostgreSQL, SQL Server, MongoDB, Apache Cassandra \\
-  \textbf{Dev Tools:} & Git, Vite, AWS, Linode, Docker, Podman, Linux, Node.js \\
-  \textbf{Design:} & Kdenlive, Inkscape, GIMP, Canva, ChatGPT, Midjourney, OpenAI API \\
+  \textbf{Bases de Datos:} & MySQL/MariaDB, PostgreSQL, SQL Server, MongoDB, Apache Cassandra \\
+  \textbf{Herramientas:} & Git, Vite, AWS, Linode, Docker, Podman, Linux, Node.js \\
+  \textbf{Diseño:} & Kdenlive, Inkscape, GIMP, Canva, ChatGPT, Midjourney, OpenAI API \\
 \end{tabular}
 %--------------------------------------------
 
 
-%-----------EXPERIENCE-----------------------
-% Distill all your talking points to small bullet points which follow the pattern "challenge-action-result" for maximum efficiency. Try to quantify (use numbers) your points whenver possible, highlight words of importance
+%-----------EXPERIENCIA-----------------------
+% Destila todos tus puntos clave en viñetas pequeñas siguiendo el patrón "desafío-acción-resultado"
+% para máxima eficiencia. Cuantifica (usa números) tus logros cuando sea posible, resalta palabras importantes
 
 \section{Experiencia}
 \resumeHeadingListStart{}
 
 \resumeQuadHeading{Analista de Datos}{Ag 2024 -- Set 2024}
   {\href{https://www.guayaquil.gob.ec/}{\uline{Nostrum}}}{Guayaquil, Guayas, Ecuador}
-  \small {Contacto: Ing. Michelle Prendes, +593 99 927 9601}
   \resumeItemListStart{}
-    \resumeItem{Desarrollé una aplicación GUI basada en Python utilizando CustomTkinter para la automatización de la coincidencia de direcciones y el procesamiento de datos.}
-    \resumeItem{Implementé un algoritmo eficiente de coincidencia de direcciones para procesar múltiples hojas de Excel con umbrales de similitud configurables.}
-    \resumeItem{Creé una arquitectura modular para separar la interfaz de usuario, el procesamiento de datos y la lógica de coincidencia de direcciones, mejorando así la mantenibilidad.}
-    \resumeItem{Integré una funcionalidad de seguimiento del progreso para conjuntos de datos grandes, proporcionando retroalimentación en tiempo real al usuario.}
-    \resumeItem{Automaticé operaciones con archivos de Excel, reduciendo el tiempo de entrada manual de datos en aproximadamente un 75\%.}
-    \resumeItem{Utilicé tecnologías como Python, Pandas y CustomTkinter para un manejo efectivo de datos y una interacción fluida con el usuario.}
+    \resumeItem{Automaticé coincidencia de direcciones con \textbf{Python} y \textbf{CustomTkinter}, reduciendo tiempo de procesamiento en \textbf{75\%}.}
+    \resumeItem{Procesé múltiples archivos Excel con algoritmo eficiente usando \textbf{Pandas} y umbrales de similitud configurables.}
+    \resumeItem{Implementé arquitectura modular separando UI, lógica de negocio y procesamiento de datos para mejorar mantenibilidad.}
+    \resumeItem{Integré seguimiento de progreso en tiempo real para datasets con miles de registros.}
 \resumeItemListEnd{}
 
 \resumeQuadHeading{Desarrollo Web}{Jul 2023 -- Ene 2024}
   {\href{https://contabilly.com}{\uline{Contabilly S.A.S.}}}{Guayaquil, Guayas, Ecuador}
-  \small {Contactos: Ing. Leonardo Castro, +593 96 270 3372 | Ing. Leo Castro Jr, +593 99 257 1921}
     \resumeItemListStart{}
-      \resumeItem{Trabajé en un software de gestión de ventas con funciones como gestionar contactos telefónicos y programar citas con clientes potenciales.}
-      \resumeItem{En frontend utilicé React, Redux Toolkit, validación con Formik, Yup y Material UI.}
-      \resumeItem{En backend usé Express.js, MySQL y Sequelize.}
+      \resumeItem{Desarrollé sistema de gestión de ventas con agendamiento de citas y gestión de contactos.}
+      \resumeItem{Construí frontend con \textbf{React}, \textbf{Redux Toolkit}, validación con \textbf{Formik/Yup} y \textbf{Material UI}.}
+      \resumeItem{Implementé backend con \textbf{Express.js}, \textbf{MySQL} y \textbf{Sequelize} como ORM.}
     \resumeItemListEnd{}
 
   \resumeQuadHeading{Desarrollo Web}{Oct 2022 -- Dic 2022}
   {\href{https://high-track.com/}{\uline{High-Track}}}{Guayaquil, Guayas, Ecuador}
-  \small {Contactos: Ing. Milton Villafuerte, +593 99 943 7032 | Ing. Jonathan Bravo, +593 99 066 0821}
     \resumeItemListStart{}
-      \resumeItem{Implementé la validación para controlar estudiantes, buses, conductores, escuelas y rutas en una aplicación de rastreo de buses.}
-      \resumeItem{Diseñé la opción "Rutas de buses" e implementé una frase GPS-NMEA usando el estándar RMC o \$GPRMC para rastrear vehículos.}
-      \resumeItem{Trabajé con Bootstrap, Django, jQuery y Git.}
-      \resumeItem{Mejoré la utilidad de la aplicación en un 10\%.}
+      \resumeItem{Implementé sistema de validación para gestión de estudiantes, buses, conductores y rutas escolares.}
+      \resumeItem{Desarrollé módulo de rastreo GPS-NMEA usando estándar \textbf{RMC/\$GPRMC} para tracking de vehículos en tiempo real.}
+      \resumeItem{Trabajé con \textbf{Django}, \textbf{Bootstrap}, \textbf{jQuery} mejorando la experiencia de usuario en \textbf{10\%}.}
     \resumeItemListEnd{}
     
   \resumeQuadHeading{Desarrollador Full Stack}{Ene 2018 -- Presente}
   {\href{https://christianbueno.work}{\uline{www.christianbueno.work}}}{Guayaquil, Guayas, Ecuador}
     \resumeItemListStart{}
-      \resumeItem{Servicios de Diseño y Desarrollo Web.}
-      \resumeItem{Servicios de Desarrollo de Software.}
-      \resumeItem{Desarrollo de Aplicaciones Móviles.}
-      \resumeItem{Creación de landing pages, sitios corporativos, e-commerce y tiendas online.}
-      \resumeItem{Creación de contenido, diseño gráfico y multimedia, gestión de redes sociales (community manager).}
+      \resumeItem{Desarrollé y desplegué \textbf{7 proyectos} (e-commerce, corporativos, herramientas SaaS) usando \textbf{React}, \textbf{TypeScript}, \textbf{FastAPI}, \textbf{WordPress} y \textbf{Tailwind CSS}.}
+      \resumeItem{Automaticé despliegues con \textbf{Podman}, \textbf{Shell scripts}, construyendo imágenes, pods, contenedores y volúmenes para persistencia de datos.}
+      \resumeItem{Gestioné infraestructura como código con \textbf{OpenTofu} (DigitalOcean, Azure, AWS) y \textbf{Ansible} para provisionamiento de VMs, configuración de firewalls y servidores web en \textbf{RedHat/Rocky/Ubuntu Linux}.}
+      \resumeItem{Administré DNS con \textbf{Cloudflare} y entregué proyectos completos incluyendo e-commerce, landing pages, apps móviles y sistemas corporativos.}
     \resumeItemListEnd{}
     
 \resumeHeadingListEnd{}
@@ -266,8 +245,8 @@
 
 
 
-%-----------SUMMARY--------------------------
-% Keep this short, simple and straigth to point
+%-----------RESUMEN--------------------------
+% Mantén esto corto, simple y directo al punto
 
 \section{Biografía}
 \small{
@@ -276,8 +255,8 @@
 %--------------------------------------------
 
 
-%-----------EDUCATION-------------------------
-% Mention your CGPA, if its good, in the first row of second column
+%-----------EDUCACIÓN-------------------------
+% Menciona tu promedio académico si es bueno, en la primera fila de la segunda columna
 
 \section{Educación}
   \resumeHeadingListStart{}
