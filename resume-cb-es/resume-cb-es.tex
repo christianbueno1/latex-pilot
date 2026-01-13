@@ -14,7 +14,6 @@
 \usepackage{titlesec}     % formato personalizado de secciones
 \usepackage{enumitem}     % control sobre listas (itemize, enumerate)
 \usepackage{fancyhdr}     % personalización de encabezados y pies de página
-\usepackage{tabularx}     % tablas mejoradas con anchos de columna flexibles
 \usepackage[empty]{fullpage} % márgenes de página personalizados
 
 % Enlaces y formato de texto
@@ -81,9 +80,6 @@
 
 
 %--------REDEFINICIONES----------------
-% redefine el estilo del punto de viñeta
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 % redefine la profundidad del subrayado a 2pt
 \renewcommand{\ULdepth}{2pt}
 %-------------------------------------
@@ -103,28 +99,6 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
-% resumeSectionType renderiza un tipo en negrita para usar bajo una sección
-% usado para tipo de habilidad aquí, el elemento del medio mantiene los ":" en la misma línea vertical
-\newcommand{\resumeSectionType}[3]{
-  \item\begin{tabularx}{0.96\textwidth}[t]{
-    p{0.15\linewidth}p{0.02\linewidth}X
-  }
-    \textbf{#1} & #2 & #3
-  \end{tabularx}\vspace{-2pt}
-}
-
-% resumeTrioHeading renderiza tres elementos en tres columnas
-% segundo elemento en cursiva y primer elemento en negrita, se puede usar para proyectos con tres elementos
-\newcommand{\resumeTrioHeading}[3]{
-  \item\small{
-    \begin{tabular*}{0.96\textwidth}[t]{
-      l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r
-    }
-      \textbf{#1} & \textit{#2} & #3
-    \end{tabular*}
-  }
-}
-
 % resumeQuadHeading renderiza cuatro elementos en dos columnas
 % segunda fila en cursiva y primer elemento de primera fila en negrita
 % se puede usar para experiencia y proyectos con cuatro elementos
@@ -136,15 +110,6 @@
   \end{tabular*}
 }
 
-% resumeQuadHeadingChild renderiza la segunda fila de resumeQuadHeading
-% se puede usar para experiencia si se necesitan agregar diferentes roles en la misma empresa
-\newcommand{\resumeQuadHeadingChild}[2]{
-  \item
-  \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{\small#1} & {\small#2} \\
-  \end{tabular*}
-}
-
 % comandos para iniciar y finalizar itemización de resumeQuadHeading
 % lefmargin para indentación izquierda de 0.15in para resumeItems
 \newcommand{\resumeHeadingListStart}{
@@ -152,13 +117,10 @@
 }
 \newcommand{\resumeHeadingListEnd}{\end{itemize}}
 
-% comandos para detalles de contacto - código más limpio
+% comandos para detalles de contacto
 \newcommand{\name}[1]{\textbf{\Huge #1}}
-\newcommand{\contactInfo}[2]{#1 & #2 \\}
 \newcommand{\socialLinks}[1]{#1}
 \newcommand{\separator}{$|$}
-% para usar puntos como separadores en lugar de pipes
-% \newcommand{\separator}{$\bullet$}
 %-------------------------------------------
 
 
