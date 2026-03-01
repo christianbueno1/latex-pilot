@@ -151,12 +151,13 @@
 \section{Technical Skills}
 \begin{tabular}{@{}p{3.2cm}l@{}}
   \textbf{DevOps:} & Jenkins, Terraform/OpenTofu, Ansible, Kubernetes, Maven \\
-  \textbf{Languages:} & Python, JavaScript, TypeScript, Java 25 \\
+  \textbf{Languages:} & Python 3.13, JavaScript, TypeScript, Java 25 \\
   \textbf{Backend:} & Spring Boot 4, Spring Security 7, Spring Data JPA, Hibernate, Jakarta Validation, Lombok \\
+  \textbf{AI / LLM:} & LangChain, LangGraph, LangMem, OpenAI API (GPT-4o-mini), pgvector \\
   \textbf{Frameworks:} & NestJS, Express.js, FastAPI, Django, Flask, Tailwindcss, Next.js \\
-  \textbf{Databases:} & PostgreSQL 18, MySQL/MariaDB, SQL Server, MongoDB, Apache Cassandra \\
+  \textbf{Databases:} & PostgreSQL 18, pgvector, MySQL/MariaDB, SQL Server, MongoDB, Apache Cassandra \\
   \textbf{Security:} & Spring Security 7 (OTT passwordless), RBAC, SOPS + age (AES256-GCM) \\
-  \textbf{Tools:} & Git, Vite, AWS, Linode, Docker, Podman, Linux, Node.js \\
+  \textbf{Tools:} & Git, Vite, AWS, Linode, Docker, Podman, Linux, Node.js, uv \\
   \textbf{Design:} & Kdenlive, Inkscape, GIMP, Canva, ChatGPT, Midjourney, OpenAI API \\
 \end{tabular}
 %--------------------------------------------
@@ -168,6 +169,27 @@
 
 \section{Experience}
 \resumeHeadingListStart{}
+
+  \resumeQuadHeading{AI / Backend Developer}{2025 -- 2026}
+  {Multichannel Virtual Assistant LLM+RAG --- Personal Project}{Guayaquil, Guayas, Ecuador}
+    \resumeItemListStart{}
+      \resumeItem{Built a multichannel virtual assistant with \textbf{LangGraph} and \textbf{LangChain}, implementing agentic conversation flows with \textbf{GPT-4o-mini} and \textbf{13 tools} via function calling (properties, appointments, memory).}
+      \resumeItem{Implemented \textbf{RAG} with \textbf{pgvector} and OpenAI Embeddings (\textit{text-embedding-3-small}, 1536 dims) for cosine similarity semantic search over a real estate inventory.}
+      \resumeItem{Designed multi-namespace persistent semantic memory with \textbf{LangMem} and \textbf{PostgreSQL} (client profiles, properties, interactions), with conversational state checkpointing by \texttt{phone\_number}.}
+      \resumeItem{Built async REST API with \textbf{FastAPI} + \textbf{Uvicorn} and integrated WhatsApp webhooks via \textbf{WAHA} (WhatsApp HTTP API) for real-time inbound message processing.}
+      \resumeItem{Containerized \textbf{PostgreSQL + pgvector} with \textbf{Docker} and managed dependencies with \textbf{uv}, optimizing costs with token caching (\textbf{50\%} discount) and condensed prompts.}
+    \resumeItemListEnd{}
+
+  \resumeQuadHeading{Backend Developer}{2025 -- 2026}
+  {StockPilot API --- Personal Project}{Guayaquil, Guayas, Ecuador}
+    \resumeItemListStart{}
+      \resumeItem{Developed RESTful inventory management API with \textbf{Spring Boot 4} and \textbf{Java 25}, implementing full CRUD with \textbf{Spring Data JPA} and \textbf{PostgreSQL 18}.}
+      \resumeItem{Implemented passwordless authentication with \textbf{Spring Security 7} One-Time Token (OTT), eliminating credential leak risks via email-based login flow.}
+      \resumeItem{Designed role-based access control (\textbf{RBAC}) with granular per-endpoint authorization (ROLE\_ADMIN, ROLE\_USER, public) using declarative \textbf{SecurityFilterChain}.}
+      \resumeItem{Applied layered architecture (Controller $\rightarrow$ Service $\rightarrow$ Repository) with DTO pattern, \textbf{Jakarta Bean Validation} and centralized error handling with \textbf{@RestControllerAdvice}.}
+      \resumeItem{Containerized \textbf{PostgreSQL} with rootless \textbf{Podman} and \textbf{Kubernetes} manifests, externalizing configuration with ConfigMaps and Secrets.}
+      \resumeItem{Implemented secrets encryption at rest with \textbf{SOPS + age} (AES256-GCM) for secure credential management in Git.}
+    \resumeItemListEnd{}
 
 \resumeQuadHeading{Data Analyst}{Aug 2024 -- Sep 2024}
   {\href{https://www.guayaquil.gob.ec/}{\uline{Nostrum}}}{Guayaquil, Guayas, Ecuador}
@@ -193,25 +215,14 @@
       \resumeItem{Developed GPS-NMEA tracking module using \textbf{RMC/\$GPRMC} standard for real-time vehicle tracking.}
       \resumeItem{Worked with \textbf{Django}, \textbf{Bootstrap}, \textbf{jQuery} improving user experience by \textbf{10\%}.}
     \resumeItemListEnd{}
-    
-  \resumeQuadHeading{Full Stack Developer}{Jan 2018 -- Present}
+
+  \resumeQuadHeading{Full Stack Developer}{Jan 2018 -- 2024}
   {\href{https://christianbueno.work}{\uline{www.christianbueno.work}}}{Guayaquil, Guayas, Ecuador}
     \resumeItemListStart{}
       \resumeItem{Developed and deployed \textbf{7 projects} (e-commerce, corporate, SaaS tools) using \textbf{React}, \textbf{TypeScript}, \textbf{FastAPI}, \textbf{WordPress} and \textbf{Tailwind CSS}.}
       \resumeItem{Automated deployments with \textbf{Podman}, \textbf{Shell scripts}, building images, pods, containers and volumes for data persistence.}
       \resumeItem{Managed infrastructure as code with \textbf{OpenTofu} (DigitalOcean, Azure, AWS) and \textbf{Ansible} for VM provisioning, firewall configuration and web servers on \textbf{RedHat/Rocky/Ubuntu Linux}.}
       \resumeItem{Managed DNS with \textbf{Cloudflare} and delivered complete projects including e-commerce, landing pages, mobile apps and corporate systems.}
-    \resumeItemListEnd{}
-
-  \resumeQuadHeading{Backend Developer}{2025 -- 2026}
-  {StockPilot API --- Personal Project}{Guayaquil, Guayas, Ecuador}
-    \resumeItemListStart{}
-      \resumeItem{Developed RESTful inventory management API with \textbf{Spring Boot 4} and \textbf{Java 25}, implementing full CRUD with \textbf{Spring Data JPA} and \textbf{PostgreSQL 18}.}
-      \resumeItem{Implemented passwordless authentication with \textbf{Spring Security 7} One-Time Token (OTT), eliminating credential leak risks via email-based login flow.}
-      \resumeItem{Designed role-based access control (\textbf{RBAC}) with granular per-endpoint authorization (ROLE\_ADMIN, ROLE\_USER, public) using declarative \textbf{SecurityFilterChain}.}
-      \resumeItem{Applied layered architecture (Controller $\rightarrow$ Service $\rightarrow$ Repository) with DTO pattern, \textbf{Jakarta Bean Validation} and centralized error handling with \textbf{@RestControllerAdvice}.}
-      \resumeItem{Containerized \textbf{PostgreSQL} with rootless \textbf{Podman} and \textbf{Kubernetes} manifests, externalizing configuration with ConfigMaps and Secrets.}
-      \resumeItem{Implemented secrets encryption at rest with \textbf{SOPS + age} (AES256-GCM) for secure credential management in Git.}
     \resumeItemListEnd{}
     
 \resumeHeadingListEnd{}
@@ -225,7 +236,7 @@
 
 \section{Biography}
 \small{
-  \textbf{Full Stack, Backend Developer and DevOps Specialist} with over 6 years of experience building and deploying technology solutions. Computer Science Engineering student at ESPOL (graduating soon). I specialize in modern web application development, RESTful APIs and infrastructure automation. I work with technologies like \textbf{React}, \textbf{TypeScript}, \textbf{Spring Boot 4}, \textbf{FastAPI} and \textbf{Kubernetes}. I build RESTful APIs with \textbf{Java 25} applying modern security practices (OTT passwordless authentication, \textbf{RBAC}, secrets encryption with \textbf{SOPS + age}). In DevOps, I use \textbf{Podman}, \textbf{OpenTofu}, \textbf{Ansible} and \textbf{CI/CD} to scale projects reliably. I have deployed 7+ projects in production including e-commerce, SaaS and corporate systems. Looking for opportunities to work on challenging projects that combine full stack development with modern DevOps practices.
+  \textbf{Full Stack, Backend, AI Developer and DevOps Specialist} with over 6 years of experience building and deploying technology solutions. Computer Science Engineering student at ESPOL (graduating soon). I specialize in RESTful API development, conversational AI systems and infrastructure automation. I build APIs with \textbf{Java 25} and \textbf{Spring Boot 4} applying modern security (OTT passwordless authentication, \textbf{RBAC}, encryption with \textbf{SOPS + age}), and AI systems with \textbf{LangGraph}, \textbf{LangChain} and \textbf{RAG} over \textbf{pgvector}. In DevOps, I use \textbf{Podman}, \textbf{OpenTofu}, \textbf{Ansible} and \textbf{CI/CD} to scale projects reliably. I have deployed 7+ projects in production including e-commerce, SaaS and corporate systems. Looking for opportunities to work on challenging projects combining backend development, AI and modern DevOps practices.
 }
 %--------------------------------------------
 
