@@ -36,13 +36,14 @@ rm -rf resume-cb-en.{aux,log,out,pdf,fdb_latexmk,fls,synctex.gz}
 # 🎉 Tu PDF está listo:
 xdg-open resume-cb-en.pdf
 
+# spanish version
+cd ~/projects/latex-pilot/resume-cb-es && \
 podman run --rm \
   -v "$PWD":/data:Z \
   -w /data \
   docker.io/texlive/texlive \
   pdflatex resume-cb-es.tex
 
-# spanish version
 podman run --rm \
   -v "$PWD":/data:Z \
   -w /data \
@@ -50,6 +51,7 @@ podman run --rm \
   pdflatex carta-presentacion-es.tex
 
 # english version
+cd ~/projects/latex-pilot/resume-cb-en && \
 podman run --rm \
   -v "$PWD":/data:Z \
   -w /data \
