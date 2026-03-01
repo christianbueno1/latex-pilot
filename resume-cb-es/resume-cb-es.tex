@@ -150,10 +150,12 @@
 %--------------HABILIDADES TÉCNICAS------------------------
 \section{Habilidades Técnicas}
 \begin{tabular}{@{}p{3.2cm}l@{}}
-  \textbf{DevOps:} & Jenkins, Terraform/OpenTofu, Ansible, Kubernetes \\
-  \textbf{Lenguajes:} & Python, JavaScript, TypeScript, Java \\
+  \textbf{DevOps:} & Jenkins, Terraform/OpenTofu, Ansible, Kubernetes, Maven \\
+  \textbf{Lenguajes:} & Python, JavaScript, TypeScript, Java 25 \\
+  \textbf{Backend:} & Spring Boot 4, Spring Security 7, Spring Data JPA, Hibernate, Jakarta Validation, Lombok \\
   \textbf{Frameworks:} & NestJS, Express.js, FastAPI, Django, Flask, Tailwindcss, Next.js \\
-  \textbf{Bases de Datos:} & MySQL/MariaDB, PostgreSQL, SQL Server, MongoDB, Apache Cassandra \\
+  \textbf{Bases de Datos:} & PostgreSQL 18, MySQL/MariaDB, SQL Server, MongoDB, Apache Cassandra \\
+  \textbf{Seguridad:} & Spring Security 7 (OTT passwordless), RBAC, SOPS + age (AES256-GCM) \\
   \textbf{Herramientas:} & Git, Vite, AWS, Linode, Docker, Podman, Linux, Node.js \\
   \textbf{Diseño:} & Kdenlive, Inkscape, GIMP, Canva, ChatGPT, Midjourney, OpenAI API \\
 \end{tabular}
@@ -200,6 +202,17 @@
       \resumeItem{Gestioné infraestructura como código con \textbf{OpenTofu} (DigitalOcean, Azure, AWS) y \textbf{Ansible} para provisionamiento de VMs, configuración de firewalls y servidores web en \textbf{RedHat/Rocky/Ubuntu Linux}.}
       \resumeItem{Administré DNS con \textbf{Cloudflare} y entregué proyectos completos incluyendo e-commerce, landing pages, apps móviles y sistemas corporativos.}
     \resumeItemListEnd{}
+
+  \resumeQuadHeading{Desarrollador Backend}{2025 -- 2026}
+  {StockPilot API --- Proyecto Personal}{Guayaquil, Guayas, Ecuador}
+    \resumeItemListStart{}
+      \resumeItem{Desarrollé API RESTful de gestión de inventario con \textbf{Spring Boot 4} y \textbf{Java 25}, implementando CRUD completo con \textbf{Spring Data JPA} y \textbf{PostgreSQL 18}.}
+      \resumeItem{Implementé autenticación passwordless con \textbf{Spring Security 7} One-Time Token (OTT), eliminando riesgos de filtración de credenciales mediante flujo de login por email.}
+      \resumeItem{Diseñé control de acceso basado en roles (\textbf{RBAC}) con autorización granular por endpoint (ROLE\_ADMIN, ROLE\_USER, público) usando \textbf{SecurityFilterChain} declarativo.}
+      \resumeItem{Apliqué arquitectura en capas (Controller $\rightarrow$ Service $\rightarrow$ Repository) con patrón DTO, \textbf{Jakarta Bean Validation} y manejo centralizado de errores con \textbf{@RestControllerAdvice}.}
+      \resumeItem{Contenerizé \textbf{PostgreSQL} con \textbf{Podman} rootless y manifiestos \textbf{Kubernetes}, externalizando configuración con ConfigMaps y Secrets.}
+      \resumeItem{Implementé cifrado de secretos en reposo con \textbf{SOPS + age} (AES256-GCM) para gestión segura de credenciales en Git.}
+    \resumeItemListEnd{}
     
 \resumeHeadingListEnd{}
 %---------------------------------------------
@@ -212,7 +225,7 @@
 
 \section{Biografía}
 \small{
-  \textbf{Desarrollador Full Stack y Especialista DevOps} con más de 6 años de experiencia construyendo y desplegando soluciones tecnológicas. Estudiante de Ingeniería en Computación en ESPOL (próximo a graduarse). Me especializo en desarrollo de aplicaciones web modernas, automatización de infraestructura y despliegues en producción. Trabajo con tecnologías como \textbf{React}, \textbf{TypeScript}, \textbf{FastAPI}, \textbf{Django} y \textbf{Kubernetes}. En DevOps, uso \textbf{Podman}, \textbf{OpenTofu}, \textbf{Ansible} y \textbf{CI/CD} para escalar proyectos de forma confiable. He desplegado 7+ proyectos en producción incluyendo e-commerce, SaaS y sistemas corporativos. Busco oportunidades para trabajar en proyectos desafiantes que combinen desarrollo full stack con prácticas DevOps modernas.
+  \textbf{Desarrollador Full Stack, Backend y Especialista DevOps} con más de 6 años de experiencia construyendo y desplegando soluciones tecnológicas. Estudiante de Ingeniería en Computación en ESPOL (próximo a graduarse). Me especializo en desarrollo de aplicaciones web modernas, APIs RESTful y automatización de infraestructura. Trabajo con tecnologías como \textbf{React}, \textbf{TypeScript}, \textbf{Spring Boot 4}, \textbf{FastAPI} y \textbf{Kubernetes}. Desarrollo APIs RESTful con \textbf{Java 25} aplicando seguridad moderna (autenticación passwordless OTT, \textbf{RBAC}, cifrado de secretos con \textbf{SOPS + age}). En DevOps, uso \textbf{Podman}, \textbf{OpenTofu}, \textbf{Ansible} y \textbf{CI/CD} para escalar proyectos de forma confiable. He desplegado 7+ proyectos en producción incluyendo e-commerce, SaaS y sistemas corporativos. Busco oportunidades para trabajar en proyectos desafiantes que combinen desarrollo full stack con prácticas DevOps modernas.
 }
 %--------------------------------------------
 
