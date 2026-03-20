@@ -31,7 +31,7 @@
 \pdfgentounicode=1 % asegura que los PDFs generados sean legibles por ATS
 
 %----------OPCIONES DE FUENTE-------------------
-\usepackage[default]{sourcesanspro} % usa la fuente Source Sans Pro
+\usepackage[default]{sourcesans} % usa la fuente Source Sans
 \urlstyle{same} % los URLs usan la misma fuente que el documento
 %-----------------------------------------
 
@@ -190,6 +190,17 @@
       \resumeItem{Contenerizé \textbf{PostgreSQL} con \textbf{Podman} rootless y manifiestos \textbf{Kubernetes}, externalizando configuración con ConfigMaps y Secrets.}
       \resumeItem{Implementé cifrado de secretos en reposo con \textbf{SOPS + age} (AES256-GCM) para gestión segura de credenciales en Git.}
     \resumeItemListEnd{}
+
+    \resumeQuadHeading{Desarrollador Full Stack}{2025 -- 2026}
+    {Clasify --- Proyecto Personal}{Guayaquil, Guayas, Ecuador}
+      \resumeItemListStart{}
+        \resumeItem{Construí marketplace full-stack de tutorías con \textbf{ASP.NET Core Web API} y \textbf{Blazor Server} (.NET 10), habilitando registro y verificación de profesores, reservas y reseñas para estudiantes.}
+        \resumeItem{Apliqué \textbf{Clean Architecture} en 4 capas (Domain, Application, Infrastructure, API) y diseñé modelo \textbf{Person}-céntrico con roles \textbf{[Flags]} (\textbf{Teacher}/\textbf{Student}) para evitar duplicidad de perfiles.}
+        \resumeItem{Implementé autenticación segura con \textbf{JWT Bearer} (access tokens de 15 min), refresh tokens rotativos de 7 días, logout real con blocklist \textbf{jti} en \textbf{Redis} y hashing de contraseñas con \textbf{PBKDF2}.}
+        \resumeItem{Implementé verificación de profesores por admin y suscripciones por niveles \textbf{Free / Starter / Pro} para controlar acceso a funcionalidades del perfil docente.}
+        \resumeItem{Desarrollé recursos REST (Auth, Teachers, Students, Subjects, Bookings, Reviews, Availability y Subscriptions) con soft delete, paginación y filtros.}
+        \resumeItem{Monté infraestructura local reproducible con \textbf{Podman} (\textbf{PostgreSQL 18 + pgvector} y \textbf{Redis} en pods/red dedicada con volúmenes persistentes) usando script único de aprovisionamiento.}
+      \resumeItemListEnd{}
 
 \resumeQuadHeading{Analista de Datos}{Ag 2024 -- Set 2024}
   {\href{https://www.guayaquil.gob.ec/}{\uline{Nostrum}}}{Guayaquil, Guayas, Ecuador}

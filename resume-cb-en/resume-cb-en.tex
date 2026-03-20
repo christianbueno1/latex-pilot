@@ -31,7 +31,7 @@
 \pdfgentounicode=1 % ensures generated PDFs are ATS-readable
 
 %----------FONT OPTIONS-------------------
-\usepackage[default]{sourcesanspro} % use Source Sans Pro font
+\usepackage[default]{sourcesans} % use Source Sans font
 \urlstyle{same} % URLs use the same font as the document
 %-----------------------------------------
 
@@ -190,6 +190,17 @@
       \resumeItem{Containerized \textbf{PostgreSQL} with rootless \textbf{Podman} and \textbf{Kubernetes} manifests, externalizing configuration with ConfigMaps and Secrets.}
       \resumeItem{Implemented secrets encryption at rest with \textbf{SOPS + age} (AES256-GCM) for secure credential management in Git.}
     \resumeItemListEnd{}
+
+    \resumeQuadHeading{Full Stack Developer}{2025 -- 2026}
+    {Clasify --- Personal Project}{Guayaquil, Guayas, Ecuador}
+      \resumeItemListStart{}
+        \resumeItem{Built a full-stack tutoring marketplace with \textbf{ASP.NET Core Web API} and \textbf{Blazor Server} (.NET 10), enabling teacher onboarding and verification, student bookings, and reviews.}
+        \resumeItem{Applied \textbf{Clean Architecture} in 4 layers (Domain, Application, Infrastructure, API) and designed a \textbf{Person}-centric model with \textbf{[Flags]} roles (\textbf{Teacher}/\textbf{Student}) to prevent duplicate profiles.}
+        \resumeItem{Implemented secure auth with \textbf{JWT Bearer} (15-min access tokens), 7-day rotating refresh tokens, Redis \textbf{jti} blocklist logout, and \textbf{PBKDF2} password hashing.}
+        \resumeItem{Implemented admin teacher verification and tiered \textbf{Free / Starter / Pro} subscriptions to control access to teacher features.}
+        \resumeItem{Developed REST resources (Auth, Teachers, Students, Subjects, Bookings, Reviews, Availability, and Subscriptions) with soft delete, pagination, and filtering.}
+        \resumeItem{Set up reproducible local infrastructure with \textbf{Podman} (\textbf{PostgreSQL 18 + pgvector} and \textbf{Redis} in isolated pods/network with persistent volumes) using a single setup script.}
+      \resumeItemListEnd{}
 
 \resumeQuadHeading{Data Analyst}{Aug 2024 -- Sep 2024}
   {\href{https://www.guayaquil.gob.ec/}{\uline{Nostrum}}}{Guayaquil, Guayas, Ecuador}
