@@ -15,6 +15,7 @@
 \usepackage{enumitem}     % control sobre listas (itemize, enumerate)
 \usepackage{fancyhdr}     % personalización de encabezados y pies de página
 \usepackage[empty]{fullpage} % márgenes de página personalizados
+\usepackage{array}        % columnas personalizadas en tablas
 
 % Enlaces y formato de texto
 \usepackage[hidelinks]{hyperref} % enlaces clicables sin bordes
@@ -149,10 +150,11 @@
 
 %--------------HABILIDADES TÉCNICAS------------------------
 \section{Habilidades Técnicas}
-\begin{tabular}{@{}p{3.2cm}l@{}}
-  \textbf{DevOps:} & Jenkins, Terraform/OpenTofu, Ansible, Kubernetes, Maven \\
+\begin{tabular}{@{}p{3.2cm}>{\raggedright\arraybackslash}p{12.8cm}@{}}
+  \textbf{DevOps:} & Jenkins, Terraform/OpenTofu, Ansible, Kubernetes, Serverless Framework, Maven \\
   \textbf{Lenguajes:} & Python 3.13, JavaScript, TypeScript, Java 25 \\
   \textbf{Backend:} & Spring Boot 4, Spring Security 7, Spring Data JPA, Hibernate, Jakarta Validation, Lombok \\
+  \textbf{Cloud / IoT:} & AWS Lambda, API Gateway, EventBridge, DynamoDB, S3, arquitecturas event-driven, simulación IoT \\
   \textbf{IA / LLM:} & LangChain, LangGraph, LangMem, OpenAI API (GPT-4o-mini), pgvector \\
   \textbf{Frameworks:} & NestJS, Express.js, FastAPI, Django, Flask, Tailwindcss, Next.js \\
   \textbf{Bases de Datos:} & PostgreSQL 18, pgvector, MySQL/MariaDB, SQL Server, MongoDB, Apache Cassandra \\
@@ -202,6 +204,17 @@
         \resumeItem{Monté infraestructura local reproducible con \textbf{Podman} (\textbf{PostgreSQL 18 + pgvector} y \textbf{Redis} en pods/red dedicada con volúmenes persistentes) usando script único de aprovisionamiento.}
       \resumeItemListEnd{}
 
+\resumeQuadHeading{Desarrollador Cloud / Backend}{2024 -- 2025}
+  {IoT Pulse --- Simulador de monitoreo IoT serverless en AWS}{Guayaquil, Guayas, Ecuador}
+  \resumeItemListStart{}
+    \resumeItem{Desarrollé una plataforma de monitoreo IoT end-to-end sobre \textbf{AWS} usando \textbf{Serverless Framework}, demostrando arquitecturas event-driven y patrones cloud-native aplicados en manufactura, agricultura y logística.}
+    \resumeItem{Diseñé e implementé un pipeline de datos en tiempo real con \textbf{AWS EventBridge} (cron scheduling) $\rightarrow$ \textbf{AWS Lambda} (Python) $\rightarrow$ \textbf{DynamoDB}, simulando \textbf{5 sensores} industriales con generación de datos realistas y detección de alertas por umbrales.}
+    \resumeItem{Construí una API REST con \textbf{API Gateway} exponiendo endpoints de historial, lecturas en tiempo real y alertas por dispositivo.}
+    \resumeItem{Implementé un seed automatizado para poblar \textbf{7 días} de historial, habilitando análisis de tendencias desde el primer deploy.}
+    \resumeItem{Desplegué un dashboard estático en \textbf{S3} con visualización de métricas y evolución temporal de sensores.}
+    \resumeItem{Stack: \textbf{Python}, \textbf{AWS Lambda}, \textbf{API Gateway}, \textbf{DynamoDB}, \textbf{EventBridge}, \textbf{Serverless Framework}, \textbf{S3}.}
+\resumeItemListEnd{}
+
 \resumeQuadHeading{Analista de Datos}{Ag 2024 -- Set 2024}
   {\href{https://www.guayaquil.gob.ec/}{\uline{Nostrum}}}{Guayaquil, Guayas, Ecuador}
   \resumeItemListStart{}
@@ -247,7 +260,7 @@
 
 \section{Biografía}
 \small{
-  \textbf{Desarrollador Full Stack, Backend, IA y Especialista DevOps} con más de 6 años de experiencia construyendo y desplegando soluciones tecnológicas. Estudiante de Ingeniería en Computación en ESPOL (próximo a graduarse). Me especializo en desarrollo de APIs RESTful, sistemas de IA conversacional y automatización de infraestructura. Desarrollo APIs con \textbf{Java 25} y \textbf{Spring Boot 4} aplicando seguridad moderna (autenticación passwordless OTT, \textbf{RBAC}, cifrado \textbf{SOPS + age}), y sistemas de IA con \textbf{LangGraph}, \textbf{LangChain} y \textbf{RAG} sobre \textbf{pgvector}. En DevOps, uso \textbf{Podman}, \textbf{OpenTofu}, \textbf{Ansible} y \textbf{CI/CD} para escalar proyectos de forma confiable. He desplegado 7+ proyectos en producción incluyendo e-commerce, SaaS y sistemas corporativos. Busco oportunidades para trabajar en proyectos desafiantes que combinen desarrollo backend, IA y prácticas DevOps modernas.
+  \textbf{Desarrollador Full Stack, Backend, IA y Especialista DevOps} con más de 6 años de experiencia construyendo y desplegando soluciones tecnológicas. Estudiante de Ingeniería en Computación en ESPOL (próximo a graduarse). Me especializo en desarrollo de APIs RESTful, sistemas de IA conversacional y automatización de infraestructura. Desarrollo APIs con \textbf{Java 25} y \textbf{Spring Boot 4} aplicando seguridad moderna (autenticación passwordless OTT, \textbf{RBAC}, cifrado \textbf{SOPS + age}), y sistemas de IA con \textbf{LangGraph}, \textbf{LangChain} y \textbf{RAG} sobre \textbf{pgvector}. Además, diseñé soluciones cloud-native en \textbf{AWS} con enfoque serverless para monitoreo IoT en tiempo real, integrando \textbf{EventBridge}, \textbf{Lambda}, \textbf{DynamoDB}, \textbf{API Gateway} y visualización en \textbf{S3}. En DevOps, uso \textbf{Podman}, \textbf{OpenTofu}, \textbf{Ansible} y \textbf{CI/CD} para escalar proyectos de forma confiable. He desplegado 7+ proyectos en producción incluyendo e-commerce, SaaS y sistemas corporativos. Busco oportunidades para trabajar en proyectos desafiantes que combinen desarrollo backend, IA, cloud y prácticas DevOps modernas.
 }
 %--------------------------------------------
 
