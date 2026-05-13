@@ -132,17 +132,17 @@
 %-----------CONTACT DETAILS------------------
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \name{Christian Bueno \vspace{2pt}} & 
+  \name{Christian Bueno \vspace{2pt}} &
   Location: Guayaquil, Guayas, Ecuador \\
-  
+
   \socialLinks{
     \href{https://www.christianbueno.work}{\uline{christianbueno.work}} \separator{}
     \href{https://www.linkedin.com/in/christianbueno1/}{\uline{LinkedIn}} \separator{}
     \href{https://github.com/christianbueno1}{\uline{GitHub}} \separator{}
     \href{https://www.instagram.com/christianbueno.1/}{\uline{Instagram}}
-  } & 
+  } &
   Email: \href{mailto:chris@deployhero.dev}{\uline{chris@deployhero.dev}} \\
-  
+
   & mobile: +593 99 028 8710 \\
 \end{tabular*}
 %--------------------------------------------
@@ -151,16 +151,16 @@
 %--------------TECHNICAL SKILLS------------------------
 \section{Technical Skills}
 \begin{tabular}{@{}p{3.2cm}>{\raggedright\arraybackslash}p{12.8cm}@{}}
-  \textbf{DevOps:} & Jenkins, Terraform/OpenTofu, Ansible, Kubernetes, Serverless Framework, Maven \\
-  \textbf{Languages:} & Python 3.13, JavaScript, TypeScript, Java 25 \\
-  \textbf{Backend:} & Spring Boot 4, Spring Security 7, Spring Data JPA, Hibernate, Jakarta Validation, Lombok \\
+  \textbf{DevOps:}      & Jenkins, Terraform/OpenTofu, Ansible, Kubernetes, Serverless Framework, Maven                  \\
+  \textbf{Languages:}   & Python 3.13, JavaScript, TypeScript, Java 25                                                   \\
+  \textbf{Backend:}     & Spring Boot 4, Spring Security 7, Spring Data JPA, Hibernate, Jakarta Validation, Lombok       \\
   \textbf{Cloud / IoT:} & AWS Lambda, API Gateway, EventBridge, DynamoDB, S3, event-driven architectures, IoT simulation \\
-  \textbf{AI / LLM:} & LangChain, LangGraph, LangMem, OpenAI API (GPT-4o-mini), pgvector \\
-  \textbf{Frameworks:} & NestJS, Express.js, FastAPI, Django, Flask, Tailwindcss, Next.js \\
-  \textbf{Databases:} & PostgreSQL 18, pgvector, MySQL/MariaDB, SQL Server, MongoDB, Apache Cassandra \\
-  \textbf{Security:} & Spring Security 7 (OTT passwordless), RBAC, SOPS + age (AES256-GCM) \\
-  \textbf{Tools:} & Git, Vite, AWS, Linode, Docker, Podman, Linux, Node.js, uv \\
-  \textbf{Design:} & Kdenlive, Inkscape, GIMP, Canva, ChatGPT, Midjourney, OpenAI API \\
+  \textbf{AI / LLM:}    & LangChain, LangGraph, LangMem, OpenAI API (GPT-4o-mini), pgvector                              \\
+  \textbf{Frameworks:}  & NestJS, Express.js, FastAPI, Django, Flask, Tailwindcss, Next.js                               \\
+  \textbf{Databases:}   & PostgreSQL 18, pgvector, MySQL/MariaDB, SQL Server, MongoDB, Apache Cassandra                  \\
+  \textbf{Security:}    & Spring Security 7 (OTT passwordless), RBAC, SOPS + age (AES256-GCM)                            \\
+  \textbf{Tools:}       & Git, Vite, AWS, Linode, Docker, Podman, Linux, Node.js, uv                                     \\
+  \textbf{Design:}      & Kdenlive, Inkscape, GIMP, Canva, ChatGPT, Midjourney, OpenAI API                               \\
 \end{tabular}
 %--------------------------------------------
 
@@ -172,83 +172,83 @@
 \section{Experience}
 \resumeHeadingListStart{}
 
-  \resumeQuadHeading{AI / Backend Developer}{2025 -- 2026}
-  {Multichannel Virtual Assistant LLM+RAG --- Personal Project}{Guayaquil, Guayas, Ecuador}
-    \resumeItemListStart{}
-      \resumeItem{Built a multichannel virtual assistant with \textbf{LangGraph} and \textbf{LangChain}, implementing agentic conversation flows with \textbf{GPT-4o-mini} and \textbf{13 tools} via function calling (properties, appointments, memory).}
-      \resumeItem{Implemented \textbf{RAG} with \textbf{pgvector} and OpenAI Embeddings (\textit{text-embedding-3-small}, 1536 dims) for cosine similarity semantic search over a real estate inventory.}
-      \resumeItem{Designed multi-namespace persistent semantic memory with \textbf{LangMem} and \textbf{PostgreSQL} (client profiles, properties, interactions), with conversational state checkpointing by \texttt{phone\_number}.}
-      \resumeItem{Built async REST API with \textbf{FastAPI} + \textbf{Uvicorn} and integrated WhatsApp webhooks via \textbf{WAHA} (WhatsApp HTTP API) for real-time inbound message processing.}
-      \resumeItem{Containerized \textbf{PostgreSQL + pgvector} with \textbf{Docker} and managed dependencies with \textbf{uv}, optimizing costs with token caching (\textbf{50\%} discount) and condensed prompts.}
-    \resumeItemListEnd{}
+\resumeQuadHeading{Full Stack Developer}{Mar 2026 -- Apr 2026}
+{Clasify --- Personal Project}{Guayaquil, Guayas, Ecuador}
+\resumeItemListStart{}
+\resumeItem{Built a full-stack tutoring marketplace with \textbf{ASP.NET Core Web API} and \textbf{Blazor Server} (.NET 10), enabling teacher onboarding and verification, student bookings, and reviews.}
+\resumeItem{Applied \textbf{Clean Architecture} in 4 layers (Domain, Application, Infrastructure, API) and designed a \textbf{Person}-centric model with \textbf{[Flags]} roles (\textbf{Teacher}/\textbf{Student}) to prevent duplicate profiles.}
+\resumeItem{Implemented secure auth with \textbf{JWT Bearer} (15-min access tokens), 7-day rotating refresh tokens, Redis \textbf{jti} blocklist logout, and \textbf{PBKDF2} password hashing.}
+\resumeItem{Implemented admin teacher verification and tiered \textbf{Free / Starter / Pro} subscriptions to control access to teacher features.}
+\resumeItem{Developed REST resources (Auth, Teachers, Students, Subjects, Bookings, Reviews, Availability, and Subscriptions) with soft delete, pagination, and filtering.}
+\resumeItem{Set up reproducible local infrastructure with \textbf{Podman} (\textbf{PostgreSQL 18 + pgvector} and \textbf{Redis} in isolated pods/network with persistent volumes) using a single setup script.}
+\resumeItemListEnd{}
 
-  \resumeQuadHeading{Backend Developer}{2025 -- 2026}
-  {StockPilot API --- Personal Project}{Guayaquil, Guayas, Ecuador}
-    \resumeItemListStart{}
-      \resumeItem{Developed RESTful inventory management API with \textbf{Spring Boot 4} and \textbf{Java 25}, implementing full CRUD with \textbf{Spring Data JPA} and \textbf{PostgreSQL 18}.}
-      \resumeItem{Implemented passwordless authentication with \textbf{Spring Security 7} One-Time Token (OTT), eliminating credential leak risks via email-based login flow.}
-      \resumeItem{Designed role-based access control (\textbf{RBAC}) with granular per-endpoint authorization (ROLE\_ADMIN, ROLE\_USER, public) using declarative \textbf{SecurityFilterChain}.}
-      \resumeItem{Applied layered architecture (Controller $\rightarrow$ Service $\rightarrow$ Repository) with DTO pattern, \textbf{Jakarta Bean Validation} and centralized error handling with \textbf{@RestControllerAdvice}.}
-      \resumeItem{Containerized \textbf{PostgreSQL} with rootless \textbf{Podman} and \textbf{Kubernetes} manifests, externalizing configuration with ConfigMaps and Secrets.}
-      \resumeItem{Implemented secrets encryption at rest with \textbf{SOPS + age} (AES256-GCM) for secure credential management in Git.}
-    \resumeItemListEnd{}
+\resumeQuadHeading{AI / Backend Developer}{Oct 2025 -- Nov 2025}
+{Multichannel Virtual Assistant LLM+RAG --- Personal Project}{Guayaquil, Guayas, Ecuador}
+\resumeItemListStart{}
+\resumeItem{Built a multichannel virtual assistant with \textbf{LangGraph} and \textbf{LangChain}, implementing agentic conversation flows with \textbf{GPT-4o-mini} and \textbf{13 tools} via function calling (properties, appointments, memory).}
+\resumeItem{Implemented \textbf{RAG} with \textbf{pgvector} and OpenAI Embeddings (\textit{text-embedding-3-small}, 1536 dims) for cosine similarity semantic search over a real estate inventory.}
+\resumeItem{Designed multi-namespace persistent semantic memory with \textbf{LangMem} and \textbf{PostgreSQL} (client profiles, properties, interactions), with conversational state checkpointing by \texttt{phone\_number}.}
+\resumeItem{Built async REST API with \textbf{FastAPI} + \textbf{Uvicorn} and integrated WhatsApp webhooks via \textbf{WAHA} (WhatsApp HTTP API) for real-time inbound message processing.}
+\resumeItem{Containerized \textbf{PostgreSQL + pgvector} with \textbf{Docker} and managed dependencies with \textbf{uv}, optimizing costs with token caching (\textbf{50\%} discount) and condensed prompts.}
+\resumeItemListEnd{}
 
-    \resumeQuadHeading{Full Stack Developer}{2025 -- 2026}
-    {Clasify --- Personal Project}{Guayaquil, Guayas, Ecuador}
-      \resumeItemListStart{}
-        \resumeItem{Built a full-stack tutoring marketplace with \textbf{ASP.NET Core Web API} and \textbf{Blazor Server} (.NET 10), enabling teacher onboarding and verification, student bookings, and reviews.}
-        \resumeItem{Applied \textbf{Clean Architecture} in 4 layers (Domain, Application, Infrastructure, API) and designed a \textbf{Person}-centric model with \textbf{[Flags]} roles (\textbf{Teacher}/\textbf{Student}) to prevent duplicate profiles.}
-        \resumeItem{Implemented secure auth with \textbf{JWT Bearer} (15-min access tokens), 7-day rotating refresh tokens, Redis \textbf{jti} blocklist logout, and \textbf{PBKDF2} password hashing.}
-        \resumeItem{Implemented admin teacher verification and tiered \textbf{Free / Starter / Pro} subscriptions to control access to teacher features.}
-        \resumeItem{Developed REST resources (Auth, Teachers, Students, Subjects, Bookings, Reviews, Availability, and Subscriptions) with soft delete, pagination, and filtering.}
-        \resumeItem{Set up reproducible local infrastructure with \textbf{Podman} (\textbf{PostgreSQL 18 + pgvector} and \textbf{Redis} in isolated pods/network with persistent volumes) using a single setup script.}
-      \resumeItemListEnd{}
+\resumeQuadHeading{Backend Developer}{May 2025}
+{StockPilot API --- Personal Project}{Guayaquil, Guayas, Ecuador}
+\resumeItemListStart{}
+\resumeItem{Developed RESTful inventory management API with \textbf{Spring Boot 4} and \textbf{Java 25}, implementing full CRUD with \textbf{Spring Data JPA} and \textbf{PostgreSQL 18}.}
+\resumeItem{Implemented passwordless authentication with \textbf{Spring Security 7} One-Time Token (OTT), eliminating credential leak risks via email-based login flow.}
+\resumeItem{Designed role-based access control (\textbf{RBAC}) with granular per-endpoint authorization (ROLE\_ADMIN, ROLE\_USER, public) using declarative \textbf{SecurityFilterChain}.}
+\resumeItem{Applied layered architecture (Controller $\rightarrow$ Service $\rightarrow$ Repository) with DTO pattern, \textbf{Jakarta Bean Validation} and centralized error handling with \textbf{@RestControllerAdvice}.}
+\resumeItem{Containerized \textbf{PostgreSQL} with rootless \textbf{Podman} and \textbf{Kubernetes} manifests, externalizing configuration with ConfigMaps and Secrets.}
+\resumeItem{Implemented secrets encryption at rest with \textbf{SOPS + age} (AES256-GCM) for secure credential management in Git.}
+\resumeItemListEnd{}
 
-\resumeQuadHeading{Cloud / Backend Developer}{2024 -- 2025}
-  {IoT Pulse --- Serverless IoT monitoring simulator on AWS}{Guayaquil, Guayas, Ecuador}
-  \resumeItemListStart{}
-    \resumeItem{Developed an end-to-end IoT monitoring platform on \textbf{AWS} using \textbf{Serverless Framework}, showcasing event-driven architecture and cloud-native patterns for use cases in manufacturing, agriculture, and logistics.}
-    \resumeItem{Designed and implemented a real-time data pipeline with \textbf{AWS EventBridge} (cron scheduling) $\rightarrow$ \textbf{AWS Lambda} (Python) $\rightarrow$ \textbf{DynamoDB}, simulating \textbf{5 industrial sensors} with realistic data generation and threshold-based alert detection.}
-    \resumeItem{Built a REST API with \textbf{API Gateway} exposing endpoints for historical data, real-time readings, and device alerts.}
-    \resumeItem{Implemented an automated seed process to populate \textbf{7 days} of history, enabling trend analysis from the first deploy.}
-    \resumeItem{Deployed a static dashboard on \textbf{S3} to visualize sensor metrics and time-series evolution.}
-    \resumeItem{Stack: \textbf{Python}, \textbf{AWS Lambda}, \textbf{API Gateway}, \textbf{DynamoDB}, \textbf{EventBridge}, \textbf{Serverless Framework}, \textbf{S3}.}
+\resumeQuadHeading{Cloud / Backend Developer}{Jan 2025}
+{IoT Pulse --- Serverless IoT monitoring simulator on AWS}{Guayaquil, Guayas, Ecuador}
+\resumeItemListStart{}
+\resumeItem{Developed an end-to-end IoT monitoring platform on \textbf{AWS} using \textbf{Serverless Framework}, showcasing event-driven architecture and cloud-native patterns for use cases in manufacturing, agriculture, and logistics.}
+\resumeItem{Designed and implemented a real-time data pipeline with \textbf{AWS EventBridge} (cron scheduling) $\rightarrow$ \textbf{AWS Lambda} (Python) $\rightarrow$ \textbf{DynamoDB}, simulating \textbf{5 industrial sensors} with realistic data generation and threshold-based alert detection.}
+\resumeItem{Built a REST API with \textbf{API Gateway} exposing endpoints for historical data, real-time readings, and device alerts.}
+\resumeItem{Implemented an automated seed process to populate \textbf{7 days} of history, enabling trend analysis from the first deploy.}
+\resumeItem{Deployed a static dashboard on \textbf{S3} to visualize sensor metrics and time-series evolution.}
+\resumeItem{Stack: \textbf{Python}, \textbf{AWS Lambda}, \textbf{API Gateway}, \textbf{DynamoDB}, \textbf{EventBridge}, \textbf{Serverless Framework}, \textbf{S3}.}
 \resumeItemListEnd{}
 
 \resumeQuadHeading{Data Analyst}{Aug 2024 -- Sep 2024}
-  {\href{https://www.guayaquil.gob.ec/}{\uline{Nostrum}}}{Guayaquil, Guayas, Ecuador}
-  \resumeItemListStart{}
-    \resumeItem{Automated address matching with \textbf{Python} and \textbf{CustomTkinter}, reducing processing time by \textbf{75\%}.}
-    \resumeItem{Processed multiple Excel files with efficient algorithm using \textbf{Pandas} and configurable similarity thresholds.}
-    \resumeItem{Implemented modular architecture separating UI, business logic and data processing to improve maintainability.}
-    \resumeItem{Integrated real-time progress tracking for datasets with thousands of records.}
+{\href{https://www.guayaquil.gob.ec/}{\uline{Nostrum}}}{Guayaquil, Guayas, Ecuador}
+\resumeItemListStart{}
+\resumeItem{Automated address matching with \textbf{Python} and \textbf{CustomTkinter}, reducing processing time by \textbf{75\%}.}
+\resumeItem{Processed multiple Excel files with efficient algorithm using \textbf{Pandas} and configurable similarity thresholds.}
+\resumeItem{Implemented modular architecture separating UI, business logic and data processing to improve maintainability.}
+\resumeItem{Integrated real-time progress tracking for datasets with thousands of records.}
 \resumeItemListEnd{}
 
 \resumeQuadHeading{Web Development}{Jul 2023 -- Jan 2024}
-  {\href{https://contabilly.com}{\uline{Contabilly S.A.S.}}}{Guayaquil, Guayas, Ecuador}
-    \resumeItemListStart{}
-      \resumeItem{Developed sales management system with appointment scheduling and contact management.}
-      \resumeItem{Built frontend with \textbf{React}, \textbf{Redux Toolkit}, validation with \textbf{Formik/Yup} and \textbf{Material UI}.}
-      \resumeItem{Implemented backend with \textbf{Express.js}, \textbf{MySQL} and \textbf{Sequelize} as ORM.}
-    \resumeItemListEnd{}
+{\href{https://contabilly.com}{\uline{Contabilly S.A.S.}}}{Guayaquil, Guayas, Ecuador}
+\resumeItemListStart{}
+\resumeItem{Developed sales management system with appointment scheduling and contact management.}
+\resumeItem{Built frontend with \textbf{React}, \textbf{Redux Toolkit}, validation with \textbf{Formik/Yup} and \textbf{Material UI}.}
+\resumeItem{Implemented backend with \textbf{Express.js}, \textbf{MySQL} and \textbf{Sequelize} as ORM.}
+\resumeItemListEnd{}
 
-  \resumeQuadHeading{Web Development}{Oct 2022 -- Dec 2022}
-  {\href{https://high-track.com/}{\uline{High-Track}}}{Guayaquil, Guayas, Ecuador}
-    \resumeItemListStart{}
-      \resumeItem{Implemented validation system for managing students, buses, drivers and school routes.}
-      \resumeItem{Developed GPS-NMEA tracking module using \textbf{RMC/\$GPRMC} standard for real-time vehicle tracking.}
-      \resumeItem{Worked with \textbf{Django}, \textbf{Bootstrap}, \textbf{jQuery} improving user experience by \textbf{10\%}.}
-    \resumeItemListEnd{}
+\resumeQuadHeading{Web Development}{Oct 2022 -- Dec 2022}
+{\href{https://high-track.com/}{\uline{High-Track}}}{Guayaquil, Guayas, Ecuador}
+\resumeItemListStart{}
+\resumeItem{Implemented validation system for managing students, buses, drivers and school routes.}
+\resumeItem{Developed GPS-NMEA tracking module using \textbf{RMC/\$GPRMC} standard for real-time vehicle tracking.}
+\resumeItem{Worked with \textbf{Django}, \textbf{Bootstrap}, \textbf{jQuery} improving user experience by \textbf{10\%}.}
+\resumeItemListEnd{}
 
-  \resumeQuadHeading{Full Stack Developer}{Jan 2018 -- 2024}
-  {\href{https://christianbueno.work}{\uline{www.christianbueno.work}}}{Guayaquil, Guayas, Ecuador}
-    \resumeItemListStart{}
-      \resumeItem{Developed and deployed \textbf{7 projects} (e-commerce, corporate, SaaS tools) using \textbf{React}, \textbf{TypeScript}, \textbf{FastAPI}, \textbf{WordPress} and \textbf{Tailwind CSS}.}
-      \resumeItem{Automated deployments with \textbf{Podman}, \textbf{Shell scripts}, building images, pods, containers and volumes for data persistence.}
-      \resumeItem{Managed infrastructure as code with \textbf{OpenTofu} (DigitalOcean, Azure, AWS) and \textbf{Ansible} for VM provisioning, firewall configuration and web servers on \textbf{RedHat/Rocky/Ubuntu Linux}.}
-      \resumeItem{Managed DNS with \textbf{Cloudflare} and delivered complete projects including e-commerce, landing pages, mobile apps and corporate systems.}
-    \resumeItemListEnd{}
-    
+\resumeQuadHeading{Full Stack Developer}{Jan 2018 -- 2024}
+{\href{https://christianbueno.work}{\uline{www.christianbueno.work}}}{Guayaquil, Guayas, Ecuador}
+\resumeItemListStart{}
+\resumeItem{Developed and deployed \textbf{7 projects} (e-commerce, corporate, SaaS tools) using \textbf{React}, \textbf{TypeScript}, \textbf{FastAPI}, \textbf{WordPress} and \textbf{Tailwind CSS}.}
+\resumeItem{Automated deployments with \textbf{Podman}, \textbf{Shell scripts}, building images, pods, containers and volumes for data persistence.}
+\resumeItem{Managed infrastructure as code with \textbf{OpenTofu} (DigitalOcean, Azure, AWS) and \textbf{Ansible} for VM provisioning, firewall configuration and web servers on \textbf{RedHat/Rocky/Ubuntu Linux}.}
+\resumeItem{Managed DNS with \textbf{Cloudflare} and delivered complete projects including e-commerce, landing pages, mobile apps and corporate systems.}
+\resumeItemListEnd{}
+
 \resumeHeadingListEnd{}
 %---------------------------------------------
 
@@ -269,10 +269,10 @@
 % Mention your GPA if it's good, in the first row of the second column
 
 \section{Education}
-  \resumeHeadingListStart{}
-    \resumeQuadHeading{Escuela Superior Politécnica del Litoral - ESPOL}{2005 -- Present}
-    {Computer Science Engineering (in progress)}{Guayaquil, Ecuador}
-  \resumeHeadingListEnd{}
+\resumeHeadingListStart{}
+\resumeQuadHeading{Escuela Superior Politécnica del Litoral - ESPOL}{2005 -- Present}
+{Computer Science Engineering (in progress)}{Guayaquil, Ecuador}
+\resumeHeadingListEnd{}
 %---------------------------------------------
 
 \end{document}
