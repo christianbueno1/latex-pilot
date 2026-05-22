@@ -44,12 +44,6 @@ podman run --rm \
   docker.io/texlive/texlive \
   pdflatex resume-cb-es.tex
 
-podman run --rm \
-  -v "$PWD":/data:Z \
-  -w /data \
-  docker.io/texlive/texlive \
-  pdflatex carta-presentacion-es.tex
-
 # english version
 cd ~/projects/latex-pilot/resume-cb-en && \
 podman run --rm \
@@ -57,6 +51,12 @@ podman run --rm \
   -w /data \
   docker.io/texlive/texlive \
   pdflatex resume-cb-en.tex
+
+podman run --rm \
+  -v "$PWD":/data:Z \
+  -w /data \
+  docker.io/texlive/texlive \
+  pdflatex carta-presentacion-es.tex
 
 
 # copy to ~/Downloads
