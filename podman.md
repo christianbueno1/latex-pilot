@@ -7,6 +7,11 @@ cd ~/projects/latex-pilot/resume-cb-en
 # GENERAL
 podman run --rm -v "$PWD":/data:Z -w /data docker.io/texlive/texlive pdflatex resume-cb-en.tex
 
+# security-guard-resume
+cd ~/projects/latex-pilot/security-guard-resume
+mkdir -p output
+podman run --rm -v "$PWD":/data:Z -w /data docker.io/texlive/texlive pdflatex -output-directory=output main.tex
+
 # DEVOPS
 cd ~/projects/latex-pilot/resume-cb-es
 podman run --rm -v "$PWD":/data:Z -w /data docker.io/texlive/texlive pdflatex resume-cb-devops-es.tex

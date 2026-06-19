@@ -1,0 +1,40 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noquoting]{babel}
+\usepackage[margin=0.82in]{geometry}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{lmodern}
+
+\input glyphtounicode
+\pdfgentounicode=1
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.10}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{4.08003pt}
+\renewcommand{\arraystretch}{1.08}
+
+\titleformat{\section}{\normalsize\bfseries\color{black}}{}{0em}{}[\vspace{-0.15em}\titlerule]
+\titlespacing*{\section}{0pt}{0.45em}{0.2em}
+
+\newcommand{\resumeHeadingListStart}{\begin{itemize}[leftmargin=0pt,label={},itemsep=0pt,topsep=0pt]}
+\newcommand{\resumeHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeItem}[1]{\item\footnotesize{#1}}
+\newcommand{\cvSection}[1]{\section*{#1}}
+\newcommand{\cvSubheading}[4]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}
+}
+\newcommand{\cvHeaderName}[1]{\textbf{\fontsize{22}{26}\selectfont #1}}
+\newcommand{\cvHeaderContact}[1]{#1}
