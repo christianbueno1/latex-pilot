@@ -13,6 +13,7 @@
 % Paquetes de diseño y tipografía
 \usepackage{titlesec}     % formato personalizado de secciones
 \usepackage{enumitem}     % control sobre listas (itemize, enumerate)
+\usepackage{needspace}    % evita cortes de página incómodos
 \usepackage{fancyhdr}     % personalización de encabezados y pies de página
 \usepackage[empty]{fullpage} % márgenes de página personalizados
 \usepackage{array}        % columnas personalizadas en tablas
@@ -250,10 +251,17 @@
 %-----------EDUCACIÓN-------------------------
 % Menciona tu promedio académico si es bueno, en la primera fila de la segunda columna
 
-\section{Educación}
+\Needspace{8\baselineskip}
+\section{Educación y Comunidades}
 \resumeHeadingListStart{}
 \resumeQuadHeading{Escuela Superior Politécnica del Litoral - ESPOL}{2005 -- Presente}
 {Ingeniería en Computación}{Guayaquil, Ecuador}
+\resumeItemListStart{}
+\item[]\textbf{Liderazgo y Comunidades}
+\resumeItem{Miembro Voluntario, IEEE Computer Society (Capítulo ESPOL): Colaboración en la organización de eventos tecnológicos y talleres de formación técnica.}
+\resumeItem{Miembro Activo, AWS User Group Ecuador \& ÉPICO: Participación constante en espacios de innovación, networking y ecosistemas de emprendimiento tecnológico.}
+\resumeItem{Organización comunitaria: Experiencia coordinando equipos de trabajo en campo y liderando campañas de comunicación directa y persuasión ciudadana.}
+\resumeItemListEnd{}
 \resumeHeadingListEnd{}
 %---------------------------------------------
 
