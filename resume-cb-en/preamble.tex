@@ -1,0 +1,99 @@
+%-------------------------
+% Resume, a LaTeX resume template for developers
+% Author: Christian Bueno
+% Based on: https://github.com/christianbueno1/latex-pilot
+% License: MIT
+%-------------------------
+
+%------------PACKAGES----------------
+\documentclass[a4paper,11pt]{article}
+
+% Design and typography packages
+\usepackage{titlesec}     % custom section formatting
+\usepackage{enumitem}     % control over lists (itemize, enumerate)
+\usepackage{needspace}    % avoid awkward page breaks
+\usepackage{fancyhdr}     % header and footer customization
+\usepackage[empty]{fullpage} % custom page margins
+\usepackage{array}        % custom table column formatting
+
+% Links and text formatting
+\usepackage[hidelinks]{hyperref} % clickable links without borders
+\usepackage[normalem]{ulem}      % underlining with line break support
+
+% Color support (modern version)
+\usepackage{xcolor}       % advanced color management
+
+% Language support
+\usepackage[english]{babel} % English typographic rules
+%-----------------------------------------
+
+\input glyphtounicode % converts glyph names to unicode
+\pdfgentounicode=1 % ensures generated PDFs are ATS-readable
+
+%----------FONT OPTIONS-------------------
+\usepackage[default]{sourcesans} % use Source Sans font
+\urlstyle{same} % URLs use the same font as the document
+%-----------------------------------------
+
+%----------MARGIN OPTIONS-----------------
+\pagestyle{fancy} % customizable page style with fancyhdr
+\fancyhf{} % clear all header and footer fields
+
+\renewcommand{\headrulewidth}{0in} % header line thickness to zero
+\renewcommand{\footrulewidth}{0in} % footer line thickness to zero
+
+\setlength{\tabcolsep}{0in} % table column separator thickness to zero
+\setlength{\footskip}{4.08003pt} % minimum footer space (avoids warnings)
+
+% document origin is one inch from top and left
+% oddsidemargin and evensidemargin refer to the left margin
+% right margin is adjusted indirectly using oddsidemargin
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\topmargin}{-0.5in}
+
+\addtolength{\textwidth}{1.0in} % increase text area width by one inch
+\addtolength{\textheight}{1.0in} % increase text area height by one inch
+
+\raggedbottom{} % all pages have the height of the current page, no extra vertical space
+\raggedright{} % all pages have the width of the current page, no extra horizontal space
+%------------------------------------------
+
+%--------SECTION COMMANDS---------
+\titleformat{\section}
+  {\scshape\large}{}
+    {0em}{\color{blue}}[\color{black}\titlerule\vspace{0pt}]
+%-------------------------------------
+
+%--------REDEFINITIONS----------------
+\renewcommand{\ULdepth}{2pt}
+%-------------------------------------
+
+%--------CUSTOM COMMANDS--------------
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+% rightmargin adjusted to 0.11in to avoid resumeItem overflow
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% resumeQuadHeading renders four elements in two columns
+\newcommand{\resumeQuadHeading}[4]{
+  \item
+  \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}
+}
+
+% leftmargin for 0.15in left indentation for resumeItems
+\newcommand{\resumeHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}]
+}
+\newcommand{\resumeHeadingListEnd}{\end{itemize}}
+
+% commands for contact details
+\newcommand{\name}[1]{\textbf{\Huge #1}}
+\newcommand{\socialLinks}[1]{#1}
+\newcommand{\separator}{$|$}
+%-------------------------------------------

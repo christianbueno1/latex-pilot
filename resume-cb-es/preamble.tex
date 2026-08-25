@@ -1,0 +1,99 @@
+%-------------------------
+% Hoja de Vida, una plantilla de currículum en latex para desarrolladores
+% Autor : Christian Bueno
+% Basado en: https://github.com/christianbueno1/latex-pilot
+% Licencia : MIT
+%-------------------------
+
+%------------PAQUETES----------------
+\documentclass[a4paper,11pt]{article}
+
+% Paquetes de diseño y tipografía
+\usepackage{titlesec}     % formato personalizado de secciones
+\usepackage{enumitem}     % control sobre listas (itemize, enumerate)
+\usepackage{needspace}    % evita cortes de página incómodos
+\usepackage{fancyhdr}     % personalización de encabezados y pies de página
+\usepackage[empty]{fullpage} % márgenes de página personalizados
+\usepackage{array}        % columnas personalizadas en tablas
+
+% Enlaces y formato de texto
+\usepackage[hidelinks]{hyperref} % enlaces clicables sin bordes
+\usepackage[normalem]{ulem}      % subrayado con soporte para saltos de línea
+
+% Soporte de color (versión moderna)
+\usepackage{xcolor}       % gestión avanzada de color
+
+% Soporte de idioma
+\usepackage[spanish,es-noquoting]{babel} % reglas tipográficas del español
+%-----------------------------------------
+
+\input glyphtounicode % convierte nombres de glifos a unicode
+\pdfgentounicode=1 % asegura que los PDFs generados sean legibles por ATS
+
+%----------OPCIONES DE FUENTE-------------------
+\usepackage[default]{sourcesans} % usa la fuente Source Sans
+\urlstyle{same} % los URLs usan la misma fuente que el documento
+%-----------------------------------------
+
+%----------OPCIONES DE MÁRGENES-----------------
+\pagestyle{fancy} % estilo de página personalizable con fancyhdr
+\fancyhf{} % limpia todos los campos de encabezado y pie de página
+
+\renewcommand{\headrulewidth}{0in} % grosor de línea bajo el encabezado a cero
+\renewcommand{\footrulewidth}{0in} % grosor de línea sobre el pie de página a cero
+
+\setlength{\tabcolsep}{0in} % grosor del separador de columnas en tablas a cero
+\setlength{\footskip}{4.08003pt} % espacio mínimo para pie de página (evita warnings)
+
+% origen del documento es una pulgada desde arriba y desde la izquierda
+% oddsidemargin y evensidemargin se refieren al margen izquierdo
+% el margen derecho se ajusta indirectamente usando oddsidemargin
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\topmargin}{-0.5in}
+
+\addtolength{\textwidth}{1.0in} % aumenta el ancho del área de texto en una pulgada
+\addtolength{\textheight}{1.0in} % aumenta la altura del área de texto en una pulgada
+
+\raggedbottom{} % todas las páginas tienen la altura de la página actual, sin espacio vertical extra
+\raggedright{} % todas las páginas tienen el ancho de la página actual, sin espacio horizontal extra
+%------------------------------------------
+
+%--------COMANDOS DE SECCIÓN---------
+\titleformat{\section}
+  {\scshape\large}{}
+    {0em}{\color{blue}}[\color{black}\titlerule\vspace{0pt}]
+%-------------------------------------
+
+%--------REDEFINICIONES----------------
+\renewcommand{\ULdepth}{2pt}
+%-------------------------------------
+
+%--------COMANDOS PERSONALIZADOS--------------
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+% rightmargin ajustado a 0.11in para evitar desbordamiento de resumeItem
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% resumeQuadHeading renderiza cuatro elementos en dos columnas
+\newcommand{\resumeQuadHeading}[4]{
+  \item
+  \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}
+}
+
+% lefmargin para indentación izquierda de 0.15in para resumeItems
+\newcommand{\resumeHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}]
+}
+\newcommand{\resumeHeadingListEnd}{\end{itemize}}
+
+% comandos para detalles de contacto
+\newcommand{\name}[1]{\textbf{\Huge #1}}
+\newcommand{\socialLinks}[1]{#1}
+\newcommand{\separator}{$|$}
+%-------------------------------------------
