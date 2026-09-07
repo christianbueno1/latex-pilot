@@ -13,6 +13,7 @@ CV modular en LaTeX.
 Desde este directorio:
 
 ```bash
+cd ~/projects/latex-pilot/resume-cb-es
 mkdir -p output
 podman run --rm \
   -v "$PWD":/data:Z \
