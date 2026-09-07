@@ -13,7 +13,9 @@ Modular English CV in LaTeX.
 From this directory:
 
 ```bash
+cd ~/projects/latex-pilot/resume-cb-en
 mkdir -p output
+
 podman run --rm \
   -v "$PWD":/data:Z \
   -w /data \
